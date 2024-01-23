@@ -1,2 +1,3 @@
-# DishDeck
-Dish Deck is an iOS for browsing tasty food recipes
+# Group C (Cross-Section)
+
+- Atul Manandhar
