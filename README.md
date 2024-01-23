@@ -3,4 +3,4 @@
 - Atul Manandhar
 - Subash Chalise
 - Akash Shrestha
-
+- Suzuse Rai
