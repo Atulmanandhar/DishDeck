@@ -1,7 +1,7 @@
 # DishDeck
 
 DishDeck is an iOS app that allows users to add and view tasty food recipes.
-Users can view, add , delete recipes and easily track ingredients requried for all their favourite recipes they want to cook.
+Users can view, add ,delete recipes and easily track ingredients requried for all their favourite recipes they want to cook.
 
 ## Group C (Cross-Section)
 
