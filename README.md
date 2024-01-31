@@ -20,10 +20,10 @@ Users can view, add ,delete recipes and easily track ingredients requried for al
 - Users can dynamically add or remove cooking steps and ingredients when adding recipes
 - Users can delete recipes
 - Users can view detailed nutrition facts
-- Users can add recipes to shopping wishlist
-- Users can quick glance shopping wishlist to view recipes ingredients
+- Users can add and remove recipes to shopping wishlist
+- Users can view all the cumilative ingredients for all recipes added in shopping wishlist at once.
 - Users can opt in to get recipe notification reminders for their shopping wishlist.
-- Users can remove recipes from shopping wishlist
+- Users can share recipes with their friends.
 - Users can search recipes by name
 - Users can filter recipes by predefined groups
 - User can toggle dark mode
