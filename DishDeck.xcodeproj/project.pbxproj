@@ -11,13 +11,15 @@
 		3853E24E2B7AF348009C071C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853E24D2B7AF348009C071C /* ProfileViewController.swift */; };
 		3853E25A2B7AF756009C071C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853E2592B7AF756009C071C /* AppCoordinator.swift */; };
 		3853E25C2B7B0069009C071C /* RecipeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3853E25B2B7B0069009C071C /* RecipeDetails.storyboard */; };
-		3853E25E2B7B007C009C071C /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853E25D2B7B007C009C071C /* RecipeDetailsViewController.swift */; };
 		542D02012B5F71FC00C0B971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D02002B5F71FC00C0B971 /* AppDelegate.swift */; };
 		542D02032B5F71FC00C0B971 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D02022B5F71FC00C0B971 /* SceneDelegate.swift */; };
 		542D02052B5F71FC00C0B971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D02042B5F71FC00C0B971 /* ViewController.swift */; };
 		542D02082B5F71FC00C0B971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542D02062B5F71FC00C0B971 /* Main.storyboard */; };
 		542D020A2B5F71FD00C0B971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542D02092B5F71FD00C0B971 /* Assets.xcassets */; };
 		542D020D2B5F71FD00C0B971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542D020B2B5F71FD00C0B971 /* LaunchScreen.storyboard */; };
+		54A5010E2B7B1BD900DF95B2 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A5010D2B7B1BD900DF95B2 /* IngredientsTableViewCell.swift */; };
+		54A501102B7B1C2C00DF95B2 /* CookingStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A5010F2B7B1C2C00DF95B2 /* CookingStepsTableViewCell.swift */; };
+		54A501122B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A501112B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,6 @@
 		3853E24D2B7AF348009C071C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3853E2592B7AF756009C071C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3853E25B2B7B0069009C071C /* RecipeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetails.storyboard; sourceTree = "<group>"; };
-		3853E25D2B7B007C009C071C /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		542D01FD2B5F71FC00C0B971 /* DishDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542D02002B5F71FC00C0B971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542D02022B5F71FC00C0B971 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +35,9 @@
 		542D02092B5F71FD00C0B971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		542D020C2B5F71FD00C0B971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		542D020E2B5F71FD00C0B971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54A5010D2B7B1BD900DF95B2 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		54A5010F2B7B1C2C00DF95B2 /* CookingStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepsTableViewCell.swift; sourceTree = "<group>"; };
+		54A501112B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +97,11 @@
 			children = (
 				542D02002B5F71FC00C0B971 /* AppDelegate.swift */,
 				3853E2592B7AF756009C071C /* AppCoordinator.swift */,
+				54A501112B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift */,
 				542D02022B5F71FC00C0B971 /* SceneDelegate.swift */,
 				3853E25B2B7B0069009C071C /* RecipeDetails.storyboard */,
-				3853E25D2B7B007C009C071C /* RecipeDetailsViewController.swift */,
+				54A5010F2B7B1C2C00DF95B2 /* CookingStepsTableViewCell.swift */,
+				54A5010D2B7B1BD900DF95B2 /* IngredientsTableViewCell.swift */,
 				3853E2512B7AF44F009C071C /* Home */,
 				3853E2582B7AF534009C071C /* Cart */,
 				3853E2572B7AF49C009C071C /* Profile */,
@@ -178,10 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A5010E2B7B1BD900DF95B2 /* IngredientsTableViewCell.swift in Sources */,
+				54A501122B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift in Sources */,
 				3853E24C2B7AF33D009C071C /* CartViewController.swift in Sources */,
 				542D02052B5F71FC00C0B971 /* ViewController.swift in Sources */,
 				3853E24E2B7AF348009C071C /* ProfileViewController.swift in Sources */,
-				3853E25E2B7B007C009C071C /* RecipeDetailsViewController.swift in Sources */,
+				54A501102B7B1C2C00DF95B2 /* CookingStepsTableViewCell.swift in Sources */,
 				542D02012B5F71FC00C0B971 /* AppDelegate.swift in Sources */,
 				542D02032B5F71FC00C0B971 /* SceneDelegate.swift in Sources */,
 				3853E25A2B7AF756009C071C /* AppCoordinator.swift in Sources */,
