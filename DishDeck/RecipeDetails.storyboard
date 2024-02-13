@@ -45,17 +45,17 @@
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsTableViewCell" id="1G7-Tg-CzG" customClass="IngredientsTableViewCell" customModule="DishDeck" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="37.666667938232422"/>
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="37.333332061767578"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1G7-Tg-CzG" id="zPA-If-V3j">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="37.666667938232422"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="37.333332061767578"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMt-QD-yuc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="37.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="37.333333333333336"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZU-fO-ajW">
-                                                                            <rect key="frame" x="12" y="8.0000000000000018" width="369" height="21.666666666666671"/>
+                                                                            <rect key="frame" x="12" y="7.9999999999999982" width="369" height="21.333333333333329"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -102,22 +102,21 @@
                                                 <rect key="frame" x="0.0" y="510" width="393" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="4Cd-oG-DmO"/>
                                                     <constraint firstAttribute="height" constant="200" id="Mt1-sY-hDg"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CookingStepsTableViewCell" id="ZRt-Xo-Zfg" customClass="CookingStepsTableViewCell" customModule="DishDeck" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="36.666667938232422"/>
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="37.666667938232422"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZRt-Xo-Zfg" id="r2E-Mb-W0N">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="36.666667938232422"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="37.666667938232422"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9P-Sa-4JM">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="36.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="37.666666666666664"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf1-nx-ItR">
-                                                                            <rect key="frame" x="12" y="8.0000000000000018" width="369" height="20.666666666666671"/>
+                                                                            <rect key="frame" x="12" y="8.0000000000000018" width="369" height="21.666666666666671"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -160,6 +159,12 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="camera.macro.circle.fill" catalog="system"/>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hawaian Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaI-fs-yQa">
+                                                <rect key="frame" x="12" y="171" width="369" height="37"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="27"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -175,12 +180,15 @@
                                             <constraint firstItem="n0k-JW-ELt" firstAttribute="top" secondItem="YGL-OB-ZDI" secondAttribute="bottom" constant="12" id="Q4L-tf-H2V"/>
                                             <constraint firstAttribute="trailing" secondItem="n0k-JW-ELt" secondAttribute="trailing" id="R8g-Y0-rU1"/>
                                             <constraint firstItem="n0k-JW-ELt" firstAttribute="leading" secondItem="Ii3-9p-ccS" secondAttribute="leading" id="Tqt-ni-Zhu"/>
+                                            <constraint firstAttribute="trailing" secondItem="SaI-fs-yQa" secondAttribute="trailing" constant="12" id="Vks-D4-MeA"/>
                                             <constraint firstItem="gO5-fc-qqR" firstAttribute="leading" secondItem="Ii3-9p-ccS" secondAttribute="leading" id="bTx-GJ-L9Y"/>
                                             <constraint firstItem="KEt-86-w88" firstAttribute="top" secondItem="p87-3y-wEF" secondAttribute="bottom" constant="12" id="c89-bN-Pw2"/>
                                             <constraint firstItem="p87-3y-wEF" firstAttribute="top" secondItem="n0k-JW-ELt" secondAttribute="bottom" constant="12" id="djc-ZK-wcw"/>
                                             <constraint firstAttribute="trailing" secondItem="p87-3y-wEF" secondAttribute="trailing" constant="12" id="iiR-wT-ulu"/>
+                                            <constraint firstItem="YGL-OB-ZDI" firstAttribute="top" secondItem="SaI-fs-yQa" secondAttribute="bottom" constant="24" id="lIH-DM-9Gn"/>
                                             <constraint firstItem="gO5-fc-qqR" firstAttribute="top" secondItem="Ii3-9p-ccS" secondAttribute="top" id="nDX-QI-23X"/>
                                             <constraint firstAttribute="bottom" secondItem="KEt-86-w88" secondAttribute="bottom" constant="100" id="qnY-5R-ShI"/>
+                                            <constraint firstItem="SaI-fs-yQa" firstAttribute="leading" secondItem="Ii3-9p-ccS" secondAttribute="leading" constant="12" id="sAG-fQ-Nlc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -222,7 +230,9 @@
                     </view>
                     <connections>
                         <outlet property="ingredientsTableView" destination="n0k-JW-ELt" id="oUt-gK-DcL"/>
+                        <outlet property="ingredientsTableViewHeight" destination="sGF-cP-es2" id="VPP-bf-yte"/>
                         <outlet property="stepsTableView" destination="KEt-86-w88" id="pEu-tK-Bjf"/>
+                        <outlet property="stepsTableViewHeight" destination="Mt1-sY-hDg" id="384-qj-U9f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

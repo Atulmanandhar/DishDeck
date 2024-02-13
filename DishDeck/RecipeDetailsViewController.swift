@@ -13,6 +13,9 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var stepsTableView: UITableView!
     
+    @IBOutlet weak var ingredientsTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var stepsTableViewHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientsTableView.delegate = self
@@ -22,6 +25,17 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         stepsTableView.delegate = self
         stepsTableView.dataSource = self
         stepsTableView.isScrollEnabled = false
+        
+        ingredientsTableViewHeight.constant = .greatestFiniteMagnitude
+        ingredientsTableView.layoutIfNeeded()
+        ingredientsTableView.reloadData()
+        ingredientsTableViewHeight.constant = ingredientsTableView.contentSize.height
+        
+        stepsTableViewHeight.constant = .greatestFiniteMagnitude
+        stepsTableView.layoutIfNeeded()
+        stepsTableView.reloadData()
+        stepsTableViewHeight.constant = stepsTableView.contentSize.height
+        
         // Do any additional setup after loading the view.
     }
     
