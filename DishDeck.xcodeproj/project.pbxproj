@@ -18,6 +18,8 @@
 		542D02082B5F71FC00C0B971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542D02062B5F71FC00C0B971 /* Main.storyboard */; };
 		542D020A2B5F71FD00C0B971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542D02092B5F71FD00C0B971 /* Assets.xcassets */; };
 		542D020D2B5F71FD00C0B971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542D020B2B5F71FD00C0B971 /* LaunchScreen.storyboard */; };
+		9BC848572B7C55FD000BC5FE /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC848562B7C55FD000BC5FE /* AddRecipeViewController.swift */; };
+		9BC848592B7C560E000BC5FE /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC848582B7C560E000BC5FE /* AddRecipe.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		542D02092B5F71FD00C0B971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		542D020C2B5F71FD00C0B971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		542D020E2B5F71FD00C0B971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC848562B7C55FD000BC5FE /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		9BC848582B7C560E000BC5FE /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				542D02022B5F71FC00C0B971 /* SceneDelegate.swift */,
 				3853E25B2B7B0069009C071C /* RecipeDetails.storyboard */,
 				3853E25D2B7B007C009C071C /* RecipeDetailsViewController.swift */,
+				9BC848562B7C55FD000BC5FE /* AddRecipeViewController.swift */,
+				9BC848582B7C560E000BC5FE /* AddRecipe.storyboard */,
 				3853E2512B7AF44F009C071C /* Home */,
 				3853E2582B7AF534009C071C /* Cart */,
 				3853E2572B7AF49C009C071C /* Profile */,
@@ -168,6 +174,7 @@
 				3853E25C2B7B0069009C071C /* RecipeDetails.storyboard in Resources */,
 				542D020A2B5F71FD00C0B971 /* Assets.xcassets in Resources */,
 				542D02082B5F71FC00C0B971 /* Main.storyboard in Resources */,
+				9BC848592B7C560E000BC5FE /* AddRecipe.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC848572B7C55FD000BC5FE /* AddRecipeViewController.swift in Sources */,
 				3853E24C2B7AF33D009C071C /* CartViewController.swift in Sources */,
 				542D02052B5F71FC00C0B971 /* ViewController.swift in Sources */,
 				3853E24E2B7AF348009C071C /* ProfileViewController.swift in Sources */,

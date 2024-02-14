@@ -11,19 +11,16 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnAddRecipe(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "AddRecipe", bundle: nil).instantiateViewController(withIdentifier: "AddRecipeViewController") as! AddRecipeViewController
+//        vc.modalTransitionStyle = .crossDissolve
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.navigationBar.isHidden = false
+        present(navVC, animated: true)
     }
-    */
-
 }
