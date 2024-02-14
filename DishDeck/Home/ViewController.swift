@@ -7,10 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+  
+    @IBOutlet weak var recipeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipeTableView.delegate = self
+        recipeTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,3 +25,15 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = recipeTableView.dequeueReusableCell(withIdentifier: "RecipesTableViewCell", for: indexPath) as! RecipesTableViewCell
+        cell.recipeName.text = "Recipe \(indexPath.item + 1)"
+        return cell
+    }
+}

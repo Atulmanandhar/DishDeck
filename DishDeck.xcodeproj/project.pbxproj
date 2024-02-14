@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B663A3B2B7B1BC800740E20 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B663A3A2B7B1BC800740E20 /* RecipesTableViewCell.swift */; };
 		3853E24C2B7AF33D009C071C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853E24B2B7AF33D009C071C /* CartViewController.swift */; };
 		3853E24E2B7AF348009C071C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853E24D2B7AF348009C071C /* ProfileViewController.swift */; };
 		3853E25A2B7AF756009C071C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853E2592B7AF756009C071C /* AppCoordinator.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B663A3A2B7B1BC800740E20 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		3853E24B2B7AF33D009C071C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		3853E24D2B7AF348009C071C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3853E2592B7AF756009C071C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				542D02042B5F71FC00C0B971 /* ViewController.swift */,
 				542D02062B5F71FC00C0B971 /* Main.storyboard */,
+				0B663A3A2B7B1BC800740E20 /* RecipesTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				3853E24C2B7AF33D009C071C /* CartViewController.swift in Sources */,
 				542D02052B5F71FC00C0B971 /* ViewController.swift in Sources */,
 				3853E24E2B7AF348009C071C /* ProfileViewController.swift in Sources */,
+				0B663A3B2B7B1BC800740E20 /* RecipesTableViewCell.swift in Sources */,
 				3853E25E2B7B007C009C071C /* RecipeDetailsViewController.swift in Sources */,
 				542D02012B5F71FC00C0B971 /* AppDelegate.swift in Sources */,
 				542D02032B5F71FC00C0B971 /* SceneDelegate.swift in Sources */,
