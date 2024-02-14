@@ -36,4 +36,9 @@ extension ViewController {
         cell.recipeName.text = "Recipe \(indexPath.item + 1)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "RecipeDetails", bundle: nil).instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
