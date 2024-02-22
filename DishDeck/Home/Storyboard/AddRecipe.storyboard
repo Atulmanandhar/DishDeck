@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,9 +62,9 @@
                                                     <constraint firstAttribute="height" constant="45" id="KtR-Gl-1xj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter quantiry" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QaD-0u-q0m">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QaD-0u-q0m">
                                                 <rect key="frame" x="12" y="363" width="221.33333333333334" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="3F6-E7-CXy"/>
@@ -78,7 +78,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="YtX-ZC-CXv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a2-35-FCA">
                                                 <rect key="frame" x="12" y="230" width="369" height="28"/>
@@ -96,6 +96,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add another ingredient"/>
+                                                <connections>
+                                                    <action selector="btnAddIngredientAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kAM-wi-ZgA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-Cw-q3y">
                                                 <rect key="frame" x="50" y="673" width="293" height="40"/>
@@ -104,6 +107,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Submit your recipe"/>
+                                                <connections>
+                                                    <action selector="btnSubmitRecipeAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Vl9-fF-FNB"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5e-WE-mYV">
                                                 <rect key="frame" x="12" y="485" width="369" height="28"/>
@@ -126,7 +132,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="8V8-eT-VdM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPW-Zb-51O">
                                                 <rect key="frame" x="50" y="618" width="293" height="35"/>
@@ -135,6 +141,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add another step"/>
+                                                <connections>
+                                                    <action selector="btnAddStepAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="agH-6V-cLE"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 0:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejx-R0-bBz">
                                                 <rect key="frame" x="12" y="528" width="369" height="21"/>
@@ -205,6 +214,14 @@
                             <constraint firstItem="SBX-um-U2y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zLI-27-xXz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblIngredientCount" destination="3yv-PY-3Js" id="uxu-5b-9im"/>
+                        <outlet property="lblStepCount" destination="ejx-R0-bBz" id="MvH-v9-XX9"/>
+                        <outlet property="txtIngredientName" destination="jms-CB-Qwq" id="Vwy-d2-t6Y"/>
+                        <outlet property="txtQuantity" destination="QaD-0u-q0m" id="ZKr-F1-lyP"/>
+                        <outlet property="txtStep" destination="gxK-WO-JzY" id="rNz-7p-JHF"/>
+                        <outlet property="txtUnit" destination="FCC-lY-YN4" id="EFF-zd-iZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
