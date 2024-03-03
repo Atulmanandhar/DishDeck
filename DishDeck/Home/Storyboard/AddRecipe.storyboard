@@ -40,15 +40,39 @@
                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2u-E3-NgP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLn-OX-wYQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="btnSelectImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3DK-0B-trm"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="x2u-E3-NgP" secondAttribute="trailing" id="BCH-yx-nKY"/>
+                                                    <constraint firstItem="x2u-E3-NgP" firstAttribute="leading" secondItem="cbb-Iz-4w8" secondAttribute="leading" id="G3A-Eb-fwf"/>
+                                                    <constraint firstItem="JLn-OX-wYQ" firstAttribute="leading" secondItem="cbb-Iz-4w8" secondAttribute="leading" id="KV2-Fe-Hij"/>
                                                     <constraint firstAttribute="width" constant="130" id="LV4-zE-Vt1"/>
                                                     <constraint firstItem="Jgi-SV-aNc" firstAttribute="leading" secondItem="cbb-Iz-4w8" secondAttribute="leading" constant="8" id="PFl-W1-2PX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="x2u-E3-NgP" secondAttribute="bottom" id="Pxg-WZ-yRD"/>
                                                     <constraint firstItem="Jgi-SV-aNc" firstAttribute="centerY" secondItem="cbb-Iz-4w8" secondAttribute="centerY" id="S2q-AQ-LHf"/>
                                                     <constraint firstItem="Jgi-SV-aNc" firstAttribute="centerX" secondItem="cbb-Iz-4w8" secondAttribute="centerX" id="WFk-sQ-n1R"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jgi-SV-aNc" secondAttribute="trailing" constant="8" id="XVH-3C-HjC"/>
+                                                    <constraint firstItem="x2u-E3-NgP" firstAttribute="top" secondItem="cbb-Iz-4w8" secondAttribute="top" id="bky-Ea-ZEz"/>
                                                     <constraint firstAttribute="height" constant="130" id="ivv-5J-jDz"/>
+                                                    <constraint firstItem="JLn-OX-wYQ" firstAttribute="top" secondItem="cbb-Iz-4w8" secondAttribute="top" id="oBx-SM-Rrw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JLn-OX-wYQ" secondAttribute="bottom" id="ozB-zS-dAr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JLn-OX-wYQ" secondAttribute="trailing" id="sVk-Xg-h4G"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -215,6 +239,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgRecipe" destination="x2u-E3-NgP" id="m4a-Wk-7BN"/>
                         <outlet property="lblIngredientCount" destination="3yv-PY-3Js" id="uxu-5b-9im"/>
                         <outlet property="lblStepCount" destination="ejx-R0-bBz" id="MvH-v9-XX9"/>
                         <outlet property="txtIngredientName" destination="jms-CB-Qwq" id="Vwy-d2-t6Y"/>
@@ -231,9 +256,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
