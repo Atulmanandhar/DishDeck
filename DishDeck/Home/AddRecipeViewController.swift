@@ -27,47 +27,25 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialDataConfig()
 //        UserDefaults.standard.removeObject(forKey: "ADD_RECIPE_MODEL")
+//        initialDataConfig()
     }
     
     func initialDataConfig() {
         let recipeModel = UserDefaultManager.shared.addRecipeModel
         
-        if recipeModel.recipeIngredients?.count != nil || recipeModel.recipeSteps?.count != nil {
-            lblIngredientCount.text = "Ingredients: \(recipeModel.recipeIngredients?.count ?? 0)"
-            txtIngredientName.text = recipeModel.recipeIngredients?[0].name
-            txtQuantity.text = "\(recipeModel.recipeIngredients?[0].quantity ?? 0)"
-            txtUnit.text = recipeModel.recipeIngredients?[0].unit
-            
-            lblStepCount.text = "Steps: \(recipeModel.recipeSteps?.count ?? 0)"
-            txtStep.text = recipeModel.recipeSteps?[0].step
-            print("Show the data")
-            
-//            guard let fileURL = recipeModel.recipeImage else { return } // The file URL where the image was saved
-//            print(fileURL)
-//            if let imageData = try? Data(contentsOf: fileURL) {
-//                let image = UIImage(data: imageData)
-//                imgRecipe.image = image
-//            }
-            
-//            if let imageUrl = recipeModel.recipeImage {
-//                    print("Image URL: \(imageUrl)")
-//                    // Load the image from the file URL
-//                    if let imageData = try? Data(contentsOf: imageUrl) {
-//                        print("Image data size: \(imageData.count)")
-//                        let image = UIImage(data: imageData)
-//                        imgRecipe.image = image
-//                    } else {
-//                        print("Failed to load image data from URL")
-//                    }
-//                } else {
-//                    print("Image URL is nil")
-//                }
-            
-            
-            
-            if let imageData = recipeModel.recipeImage {
+        if recipeModel.isEmpty != true {
+            if recipeModel[0].recipeModel?[0].recipeIngredients?.count != nil || recipeModel[0].recipeModel?[0].recipeSteps?.count != nil {
+                lblIngredientCount.text = "Ingredients: \(recipeModel[0].recipeModel?[0].recipeIngredients?.count ?? 0)"
+                txtIngredientName.text = recipeModel[0].recipeModel?[0].recipeIngredients?[0].name
+                txtQuantity.text = "\(recipeModel[0].recipeModel?[0].recipeIngredients?[0].quantity ?? 0)"
+                txtUnit.text = recipeModel[0].recipeModel?[0].recipeIngredients?[0].unit
+                
+                lblStepCount.text = "Steps: \(recipeModel[0].recipeModel?[0].recipeSteps?.count ?? 0)"
+                txtStep.text = recipeModel[0].recipeModel?[0].recipeSteps?[0].step
+                print("Show the data")
+                
+                if let imageData = recipeModel[0].recipeModel?[0].recipeImage {
                     if let image = UIImage(data: imageData) {
                         imgRecipe.image = image
                         print("Image loaded successfully")
@@ -77,8 +55,9 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
                 } else {
                     print("No image data found")
                 }
-        } else {
-            print("No data to be shown")
+            } else {
+                print("No data to be shown")
+            }
         }
     }
     
@@ -163,18 +142,17 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
             stepsList.append(obj)
         }
         
-//        UserDefaultManager.shared.saveRecipeIngredients = ingredientsList
-//        UserDefaultManager.shared.saveRecipeSteps = stepsList
-//        print(ingredientsList)
-//        print(stepsList)
-        
         var obj = AddRecipeModel()
+        obj.recipeName = ingredientsList.first?.name
         obj.recipeImage = imageUrl
         obj.recipeIngredients = ingredientsList
         obj.recipeSteps = stepsList
-        UserDefaultManager.shared.addRecipeModel = obj
         
-        print(obj)
+        var recipeData = RecipeModel()
+        recipeData.recipeModel = [obj]
+        
+        UserDefaultManager.shared.addRecipeModel.append(recipeData)
+        print(UserDefaultManager.shared.addRecipeModel)
     }
 
 }

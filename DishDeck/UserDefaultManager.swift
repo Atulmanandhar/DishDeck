@@ -18,12 +18,12 @@ class UserDefaultManager {
     private let RECIPE_INGREDIENTS_MODEL = "RECIPE_INGREDIENTS_MODEL"
     private let RECIPE_STEPS_MODEL = "RECIPE_STEPS_MODEL"
     
-    var addRecipeModel: AddRecipeModel {
+    var addRecipeModel: [RecipeModel] {
         get {
-            if let model: AddRecipeModel = getModel(key: ADD_RECIPE_MODEL) {
+            if let model: [RecipeModel] = getModel(key: ADD_RECIPE_MODEL) {
                 return model
             }
-            return AddRecipeModel()
+            return []
         } set {
             saveModel(model: newValue, key: ADD_RECIPE_MODEL)
         }

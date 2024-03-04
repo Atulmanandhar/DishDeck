@@ -12,6 +12,7 @@ struct RecipeModel: Codable {
 }
 
 struct AddRecipeModel: Codable {
+    var recipeName: String?
     var recipeImage: Data?
     var recipeIngredients: [RecipeIngredientsModel]?
     var recipeSteps: [RecipeStepsModel]?
