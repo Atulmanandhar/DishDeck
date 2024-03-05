@@ -118,7 +118,12 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
         obj.recipeImage = imageUrl
         obj.recipeIngredients = ingredientsList
         obj.recipeSteps = stepsList
-        UserDefaultManager.shared.addRecipeModel = obj
+        
+        var recipeData = RecipeModel()
+        recipeData.recipeModel = [obj]
+        
+        UserDefaultManager.shared.addRecipeModel.append(recipeData)
+        print(UserDefaultManager.shared.addRecipeModel)
 
         print(obj)
         showAlert(title: "Recipe Added", msg: "Hooray!!! Your recipe has been added.") {

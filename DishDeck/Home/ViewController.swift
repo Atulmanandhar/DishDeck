@@ -11,11 +11,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
     @IBOutlet weak var recipeTableView: UITableView!
     
+    var recipeList = [RecipeModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getRecipeData()
         recipeTableView.delegate = self
         recipeTableView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        getRecipeData()
+    }
+    
+    func getRecipeData() {
+        recipeList = UserDefaultManager.shared.addRecipeModel
+        recipeTableView.reloadData()
     }
 
     @IBAction func btnRecipeDetails(_ sender: UIButton) {
@@ -28,12 +41,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 extension ViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return recipeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recipeTableView.dequeueReusableCell(withIdentifier: "RecipesTableViewCell", for: indexPath) as! RecipesTableViewCell
-        cell.recipeName.text = "Recipe \(indexPath.item + 1)"
+        let model = recipeList[indexPath.item].recipeModel?[0].recipeName
+        cell.recipeName.text = model
+
+        if let imageData = recipeList[indexPath.item].recipeModel?[0].recipeImage {
+            if let image = UIImage(data: imageData) {
+                cell.recipeImage.image = image
+                print("Image loaded successfully")
+            } else {
+                print("Failed to load image")
+            }
+        } else {
+            print("No image data found")
+        }
         return cell
     }
     
