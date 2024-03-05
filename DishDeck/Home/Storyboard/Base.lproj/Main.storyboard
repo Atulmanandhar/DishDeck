@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HT4-Gp-4xy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HT4-Gp-4xy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tzh-vX-KOf">
-                                <rect key="frame" x="0.0" y="203" width="393" height="566"/>
+                                <rect key="frame" x="0.0" y="205" width="393" height="564"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipesTableViewCell" id="1Dc-B9-iae" customClass="RecipesTableViewCell" customModule="DishDeck" customModuleProvider="target">
@@ -123,14 +123,36 @@
                                     <outlet property="delegate" destination="LZf-u0-RMd" id="und-my-Hkf"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Delicious Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGG-32-AbJ">
+                                <rect key="frame" x="12" y="111" width="369" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CLk-xu-MWa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-gi-EZJ">
+                                <rect key="frame" x="0.0" y="141" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LZf-u0-RMd" id="3gR-Pi-m84"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6rg-Ku-m7o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tzh-vX-KOf" firstAttribute="top" secondItem="6rg-Ku-m7o" secondAttribute="top" constant="100" id="Vis-Ob-cHy"/>
+                            <constraint firstItem="6rg-Ku-m7o" firstAttribute="trailing" secondItem="hGG-32-AbJ" secondAttribute="trailing" constant="12" id="MOn-tI-7Ca"/>
+                            <constraint firstItem="Auf-gi-EZJ" firstAttribute="top" secondItem="hGG-32-AbJ" secondAttribute="bottom" id="NZf-Hp-hle"/>
+                            <constraint firstItem="hGG-32-AbJ" firstAttribute="leading" secondItem="6rg-Ku-m7o" secondAttribute="leading" constant="12" id="ZJ8-Th-2DB"/>
                             <constraint firstItem="6rg-Ku-m7o" firstAttribute="bottom" secondItem="Tzh-vX-KOf" secondAttribute="bottom" id="ZpM-jO-IXE"/>
+                            <constraint firstItem="Auf-gi-EZJ" firstAttribute="leading" secondItem="6rg-Ku-m7o" secondAttribute="leading" id="bbU-ZA-dzv"/>
+                            <constraint firstItem="hGG-32-AbJ" firstAttribute="top" secondItem="6rg-Ku-m7o" secondAttribute="top" constant="8" id="ngY-Aw-Stg"/>
                             <constraint firstItem="Tzh-vX-KOf" firstAttribute="leading" secondItem="6rg-Ku-m7o" secondAttribute="leading" id="omX-8k-AFv"/>
                             <constraint firstItem="6rg-Ku-m7o" firstAttribute="trailing" secondItem="Tzh-vX-KOf" secondAttribute="trailing" id="ryM-On-s4K"/>
+                            <constraint firstItem="Tzh-vX-KOf" firstAttribute="top" secondItem="Auf-gi-EZJ" secondAttribute="bottom" constant="8" id="sKT-9j-FTN"/>
+                            <constraint firstItem="Auf-gi-EZJ" firstAttribute="trailing" secondItem="6rg-Ku-m7o" secondAttribute="trailing" id="w80-hB-4Ao"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3uj-kC-pSD"/>
