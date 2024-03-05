@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -41,19 +41,43 @@
                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0IS-Sx-zi2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKo-nV-hzM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="btnSelectImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fKQ-N8-6Si"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="0IS-Sx-zi2" secondAttribute="trailing" id="2Ph-IY-0rU"/>
+                                                    <constraint firstItem="VKo-nV-hzM" firstAttribute="leading" secondItem="cbb-Iz-4w8" secondAttribute="leading" id="6ah-rX-58L"/>
+                                                    <constraint firstItem="0IS-Sx-zi2" firstAttribute="top" secondItem="cbb-Iz-4w8" secondAttribute="top" id="72d-oB-vrA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0IS-Sx-zi2" secondAttribute="bottom" id="BbR-cd-1Ey"/>
                                                     <constraint firstAttribute="width" constant="130" id="LV4-zE-Vt1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VKo-nV-hzM" secondAttribute="trailing" id="Mux-4U-zvg"/>
                                                     <constraint firstItem="Jgi-SV-aNc" firstAttribute="leading" secondItem="cbb-Iz-4w8" secondAttribute="leading" constant="8" id="PFl-W1-2PX"/>
                                                     <constraint firstItem="Jgi-SV-aNc" firstAttribute="centerY" secondItem="cbb-Iz-4w8" secondAttribute="centerY" id="S2q-AQ-LHf"/>
+                                                    <constraint firstItem="0IS-Sx-zi2" firstAttribute="leading" secondItem="cbb-Iz-4w8" secondAttribute="leading" id="ScN-rF-LzW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="VKo-nV-hzM" secondAttribute="bottom" id="SiJ-cN-aua"/>
+                                                    <constraint firstItem="VKo-nV-hzM" firstAttribute="top" secondItem="cbb-Iz-4w8" secondAttribute="top" id="TSL-bI-hgO"/>
                                                     <constraint firstItem="Jgi-SV-aNc" firstAttribute="centerX" secondItem="cbb-Iz-4w8" secondAttribute="centerX" id="WFk-sQ-n1R"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jgi-SV-aNc" secondAttribute="trailing" constant="8" id="XVH-3C-HjC"/>
                                                     <constraint firstAttribute="height" constant="130" id="ivv-5J-jDz"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="12"/>
+                                                        <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -223,6 +247,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgRecipe" destination="0IS-Sx-zi2" id="syj-kS-7Hi"/>
                         <outlet property="lblIngredientCount" destination="3yv-PY-3Js" id="uxu-5b-9im"/>
                         <outlet property="lblStepCount" destination="ejx-R0-bBz" id="MvH-v9-XX9"/>
                         <outlet property="txtIngredientName" destination="jms-CB-Qwq" id="Vwy-d2-t6Y"/>
@@ -238,7 +263,7 @@
     </scenes>
     <resources>
         <namedColor name="PrimaryColor">
-            <color red="0.92549019607843142" green="0.58039215686274503" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92500001192092896" green="0.57999998331069946" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
