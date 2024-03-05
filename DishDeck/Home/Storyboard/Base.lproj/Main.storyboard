@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,20 +47,19 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipesTableViewCell" id="1Dc-B9-iae" customClass="RecipesTableViewCell" customModule="DishDeck" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="76"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Dc-B9-iae" id="y3b-Jr-Vrh">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYr-H2-yW3">
-                                                    <rect key="frame" x="8" y="8" width="377" height="60"/>
+                                                    <rect key="frame" x="8" y="8" width="377" height="80"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="momo" translatesAutoresizingMaskIntoConstraints="NO" id="AHv-gf-U0l">
-                                                            <rect key="frame" x="8" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="40" id="hlW-aT-aGU"/>
-                                                                <constraint firstAttribute="height" constant="40" id="rtU-gX-5b4"/>
+                                                                <constraint firstAttribute="width" constant="80" id="sCa-7g-paV"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -68,33 +68,26 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isr-Gi-GHz">
-                                                            <rect key="frame" x="56" y="10" width="313" height="21"/>
+                                                            <rect key="frame" x="88" y="25" width="281" height="30"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="xgq-Cj-aA3"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9lv-Xs-bw0"/>
+                                                                <constraint firstAttribute="height" constant="30" id="da4-XB-Xef"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-Hu-cwd">
-                                                            <rect key="frame" x="56" y="31" width="313" height="25"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" name="PrimaryColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="isr-Gi-GHz" firstAttribute="top" secondItem="AHv-gf-U0l" secondAttribute="top" id="1Dp-iG-ws3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="t3g-Hu-cwd" secondAttribute="trailing" constant="8" id="H9D-S6-KLY"/>
-                                                        <constraint firstAttribute="bottom" secondItem="t3g-Hu-cwd" secondAttribute="bottom" constant="4" id="MmL-OX-hV9"/>
-                                                        <constraint firstItem="t3g-Hu-cwd" firstAttribute="leading" secondItem="AHv-gf-U0l" secondAttribute="trailing" constant="8" id="Qqy-nI-PhV"/>
+                                                        <constraint firstItem="AHv-gf-U0l" firstAttribute="top" secondItem="IYr-H2-yW3" secondAttribute="top" id="Exr-5c-oAl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="AHv-gf-U0l" secondAttribute="bottom" id="QW6-nt-fNI"/>
+                                                        <constraint firstItem="isr-Gi-GHz" firstAttribute="leading" secondItem="AHv-gf-U0l" secondAttribute="trailing" constant="8" symbolic="YES" id="TM3-lz-Yuh"/>
                                                         <constraint firstItem="AHv-gf-U0l" firstAttribute="centerY" secondItem="IYr-H2-yW3" secondAttribute="centerY" id="Vt0-La-COB"/>
-                                                        <constraint firstItem="t3g-Hu-cwd" firstAttribute="top" secondItem="isr-Gi-GHz" secondAttribute="bottom" id="YYs-he-eCY"/>
-                                                        <constraint firstAttribute="trailing" secondItem="isr-Gi-GHz" secondAttribute="trailing" constant="8" id="adr-FW-o7n"/>
-                                                        <constraint firstItem="isr-Gi-GHz" firstAttribute="leading" secondItem="AHv-gf-U0l" secondAttribute="trailing" constant="8" id="gQ1-s2-BST"/>
-                                                        <constraint firstItem="AHv-gf-U0l" firstAttribute="leading" secondItem="IYr-H2-yW3" secondAttribute="leading" constant="8" id="jVi-aa-2xj"/>
-                                                        <constraint firstAttribute="height" constant="60" id="wUa-0f-LtR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="isr-Gi-GHz" secondAttribute="trailing" constant="8" id="fZ7-4n-ALO"/>
+                                                        <constraint firstItem="isr-Gi-GHz" firstAttribute="centerY" secondItem="AHv-gf-U0l" secondAttribute="centerY" id="lzh-gY-rO9"/>
+                                                        <constraint firstAttribute="height" constant="80" id="wUa-0f-LtR"/>
+                                                        <constraint firstItem="AHv-gf-U0l" firstAttribute="leading" secondItem="IYr-H2-yW3" secondAttribute="leading" id="ze3-VH-VGP"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -112,7 +105,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="recipeDetail" destination="t3g-Hu-cwd" id="YkT-rD-CXr"/>
                                             <outlet property="recipeImage" destination="AHv-gf-U0l" id="nVJ-0R-DaG"/>
                                             <outlet property="recipeName" destination="isr-Gi-GHz" id="bcx-P7-YBr"/>
                                         </connections>
@@ -366,6 +358,9 @@
         <image name="momo" width="616" height="462"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.92500001192092896" green="0.57999998331069946" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
