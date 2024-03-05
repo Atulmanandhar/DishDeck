@@ -54,10 +54,14 @@ class AddRecipeViewController: UIViewController {
             stepsList.append(obj)
         }
         
-        UserDefaultManager.shared.saveRecipeIngredients = ingredientsList
-        UserDefaultManager.shared.saveRecipeSteps = stepsList
-        print(ingredientsList)
-        print(stepsList)
+        var obj = AddRecipeModel()
+        obj.recipeIngredients = ingredientsList
+        obj.recipeSteps = stepsList
+        UserDefaultManager.shared.addRecipeModel = obj
+
+        showAlert(title: "Recipe Added", msg: "Hooray!!! Your recipe has been added.") {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
 }

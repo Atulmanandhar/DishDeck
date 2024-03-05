@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct RecipeModel: Codable {
+    var recipeModel: [AddRecipeModel]?
+}
+
+struct AddRecipeModel: Codable {
+    var recipeIngredients: [RecipeIngredientsModel]?
+    var recipeSteps: [RecipeStepsModel]?
+}
+
 struct RecipeIngredientsModel: Codable {
     var serialNum: Int?
     var name: String?

@@ -14,8 +14,20 @@ class UserDefaultManager {
     let userDefault = UserDefaults.standard
     
     // UserDefault Constants
+    private let ADD_RECIPE_MODEL = "ADD_RECIPE_MODEL"
     private let RECIPE_INGREDIENTS_MODEL = "RECIPE_INGREDIENTS_MODEL"
     private let RECIPE_STEPS_MODEL = "RECIPE_STEPS_MODEL"
+    
+    var addRecipeModel: AddRecipeModel {
+        get {
+            if let model: AddRecipeModel = getModel(key: ADD_RECIPE_MODEL) {
+                return model
+            }
+            return AddRecipeModel()
+        } set {
+            saveModel(model: newValue, key: ADD_RECIPE_MODEL)
+        }
+    }
     
     var saveRecipeIngredients : [RecipeIngredientsModel] {
         get {
