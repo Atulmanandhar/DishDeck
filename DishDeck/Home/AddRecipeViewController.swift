@@ -13,6 +13,8 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var txtIngredientName: UITextField!
     @IBOutlet weak var txtQuantity: UITextField!
     @IBOutlet weak var txtUnit: UITextField!
+    @IBOutlet weak var txtFoodName: UITextField!
+    
     
     @IBOutlet weak var lblStepCount: UILabel!
     @IBOutlet weak var txtStep: UITextField!
@@ -112,7 +114,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
         var obj = AddRecipeModel()
-        obj.recipeName = ingredientsList.first?.name
+        obj.recipeName = txtFoodName.text
         obj.recipeImage = imageUrl
         obj.recipeIngredients = ingredientsList
         obj.recipeSteps = stepsList

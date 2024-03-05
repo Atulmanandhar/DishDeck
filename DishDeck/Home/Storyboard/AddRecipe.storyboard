@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,9 +21,9 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evm-xh-sU6">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="743"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="848"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEJ-Ii-ehx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's create a recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEJ-Ii-ehx">
                                                 <rect key="frame" x="12" y="20" width="369" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Qa1-tM-LaG"/>
@@ -82,7 +82,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ingredient name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jms-CB-Qwq">
-                                                <rect key="frame" x="12" y="306" width="369" height="45"/>
+                                                <rect key="frame" x="12" y="411" width="369" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="KtR-Gl-1xj"/>
                                                 </constraints>
@@ -90,7 +90,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QaD-0u-q0m">
-                                                <rect key="frame" x="12" y="363" width="221.33333333333334" height="45"/>
+                                                <rect key="frame" x="12" y="468" width="221.33333333333334" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="3F6-E7-CXy"/>
                                                 </constraints>
@@ -98,7 +98,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-lY-YN4">
-                                                <rect key="frame" x="270.33333333333331" y="363" width="110.66666666666669" height="45"/>
+                                                <rect key="frame" x="270.33333333333331" y="468" width="110.66666666666669" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="YtX-ZC-CXv"/>
                                                 </constraints>
@@ -106,7 +106,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a2-35-FCA">
-                                                <rect key="frame" x="12" y="230" width="369" height="28"/>
+                                                <rect key="frame" x="12" y="335" width="369" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="z0p-dH-K9y"/>
                                                 </constraints>
@@ -114,8 +114,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vR-Sj-UEy">
-                                                <rect key="frame" x="50" y="420" width="293" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vR-Sj-UEy">
+                                                <rect key="frame" x="50" y="525" width="293" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Fy2-rx-gYo"/>
                                                 </constraints>
@@ -126,7 +126,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-Cw-q3y">
-                                                <rect key="frame" x="50" y="673" width="293" height="40"/>
+                                                <rect key="frame" x="50" y="778" width="293" height="40"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="fUl-t3-Sp8"/>
@@ -144,7 +144,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5e-WE-mYV">
-                                                <rect key="frame" x="12" y="485" width="369" height="28"/>
+                                                <rect key="frame" x="12" y="590" width="369" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="wJv-yz-Eqf"/>
                                                 </constraints>
@@ -153,21 +153,21 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient 0:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yv-PY-3Js">
-                                                <rect key="frame" x="12" y="273" width="369" height="21"/>
+                                                <rect key="frame" x="12" y="378" width="369" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter step details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-WO-JzY">
-                                                <rect key="frame" x="12" y="561" width="369" height="45"/>
+                                                <rect key="frame" x="12" y="666" width="369" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="8V8-eT-VdM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPW-Zb-51O">
-                                                <rect key="frame" x="50" y="618" width="293" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPW-Zb-51O">
+                                                <rect key="frame" x="50" y="723" width="293" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="GdV-Hr-GcR"/>
                                                 </constraints>
@@ -178,11 +178,28 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 0:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejx-R0-bBz">
-                                                <rect key="frame" x="12" y="528" width="369" height="21"/>
+                                                <rect key="frame" x="12" y="633" width="369" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYD-H7-7Vl">
+                                                <rect key="frame" x="12" y="230" width="369" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="ANT-kr-RTM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter food name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eo2-k3-b94">
+                                                <rect key="frame" x="12" y="270" width="369" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Tgl-ma-Nl8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -192,31 +209,37 @@
                                             <constraint firstItem="3yv-PY-3Js" firstAttribute="top" secondItem="9a2-35-FCA" secondAttribute="bottom" constant="15" id="7z5-ct-0vl"/>
                                             <constraint firstItem="e5e-WE-mYV" firstAttribute="top" secondItem="8vR-Sj-UEy" secondAttribute="bottom" constant="30" id="9ZB-ii-Ocm"/>
                                             <constraint firstItem="dPW-Zb-51O" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="50" id="ADk-N6-Nlk"/>
+                                            <constraint firstItem="VYD-H7-7Vl" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="CYN-Ul-IKz"/>
                                             <constraint firstItem="8vR-Sj-UEy" firstAttribute="top" secondItem="QaD-0u-q0m" secondAttribute="bottom" constant="12" id="EuS-ay-aVz"/>
                                             <constraint firstItem="gxK-WO-JzY" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="Hke-Io-Lei"/>
                                             <constraint firstItem="3yv-PY-3Js" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="IfU-NW-rIr"/>
                                             <constraint firstItem="QaD-0u-q0m" firstAttribute="top" secondItem="jms-CB-Qwq" secondAttribute="bottom" constant="12" id="JbO-sC-lQD"/>
                                             <constraint firstAttribute="trailing" secondItem="ejx-R0-bBz" secondAttribute="trailing" constant="12" id="LMi-Ja-hBh"/>
+                                            <constraint firstItem="9a2-35-FCA" firstAttribute="top" secondItem="Eo2-k3-b94" secondAttribute="bottom" constant="20" id="Nzr-jU-pDP"/>
                                             <constraint firstAttribute="trailing" secondItem="jms-CB-Qwq" secondAttribute="trailing" constant="12" id="QWC-O3-zaU"/>
+                                            <constraint firstItem="Eo2-k3-b94" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="QjE-5R-Yxm"/>
                                             <constraint firstAttribute="bottom" secondItem="6vN-Cw-q3y" secondAttribute="bottom" constant="30" id="RNz-7t-Fut"/>
                                             <constraint firstAttribute="trailing" secondItem="dPW-Zb-51O" secondAttribute="trailing" constant="50" id="Rsl-3p-PIk"/>
+                                            <constraint firstAttribute="trailing" secondItem="VYD-H7-7Vl" secondAttribute="trailing" constant="12" id="SOc-AA-siR"/>
                                             <constraint firstItem="FCC-lY-YN4" firstAttribute="width" secondItem="jms-CB-Qwq" secondAttribute="width" multiplier="0.3" id="STd-pC-adL"/>
                                             <constraint firstItem="6vN-Cw-q3y" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="50" id="V5T-PP-Yqf"/>
                                             <constraint firstItem="e5e-WE-mYV" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="WaS-fX-4ix"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eo2-k3-b94" secondAttribute="trailing" constant="12" id="X89-KN-fpr"/>
                                             <constraint firstItem="jms-CB-Qwq" firstAttribute="top" secondItem="3yv-PY-3Js" secondAttribute="bottom" constant="12" id="XLU-S9-Rdr"/>
                                             <constraint firstItem="jms-CB-Qwq" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="XMU-Zn-wrs"/>
                                             <constraint firstAttribute="trailing" secondItem="6vN-Cw-q3y" secondAttribute="trailing" constant="50" id="ZCj-c3-rvo"/>
                                             <constraint firstItem="ejx-R0-bBz" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="a8O-sI-PPs"/>
                                             <constraint firstAttribute="trailing" secondItem="e5e-WE-mYV" secondAttribute="trailing" constant="12" id="bSx-AX-XdU"/>
                                             <constraint firstItem="gxK-WO-JzY" firstAttribute="top" secondItem="ejx-R0-bBz" secondAttribute="bottom" constant="12" id="bv0-Fc-Wvt"/>
+                                            <constraint firstItem="VYD-H7-7Vl" firstAttribute="top" secondItem="cbb-Iz-4w8" secondAttribute="bottom" constant="30" id="cbD-bu-ANh"/>
                                             <constraint firstAttribute="trailing" secondItem="iEJ-Ii-ehx" secondAttribute="trailing" constant="12" id="cfP-lf-K7V"/>
                                             <constraint firstAttribute="trailing" secondItem="8vR-Sj-UEy" secondAttribute="trailing" constant="50" id="dOv-gE-ANH"/>
                                             <constraint firstAttribute="trailing" secondItem="FCC-lY-YN4" secondAttribute="trailing" constant="12" id="dQs-Rr-qdl"/>
-                                            <constraint firstItem="9a2-35-FCA" firstAttribute="top" secondItem="cbb-Iz-4w8" secondAttribute="bottom" constant="30" id="eMK-oJ-22i"/>
                                             <constraint firstItem="cbb-Iz-4w8" firstAttribute="centerX" secondItem="iEJ-Ii-ehx" secondAttribute="centerX" id="ex1-qf-sKg"/>
                                             <constraint firstItem="iEJ-Ii-ehx" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="ey5-VL-AHu"/>
                                             <constraint firstAttribute="trailing" secondItem="3yv-PY-3Js" secondAttribute="trailing" constant="12" id="g6G-SI-jZg"/>
                                             <constraint firstItem="cbb-Iz-4w8" firstAttribute="top" secondItem="iEJ-Ii-ehx" secondAttribute="bottom" constant="20" id="hwm-WR-LPH"/>
+                                            <constraint firstItem="Eo2-k3-b94" firstAttribute="top" secondItem="VYD-H7-7Vl" secondAttribute="bottom" constant="12" id="jB2-H3-J3A"/>
                                             <constraint firstItem="FCC-lY-YN4" firstAttribute="top" secondItem="jms-CB-Qwq" secondAttribute="bottom" constant="12" id="jiH-nE-EWn"/>
                                             <constraint firstItem="9a2-35-FCA" firstAttribute="leading" secondItem="evm-xh-sU6" secondAttribute="leading" constant="12" id="pO3-uc-hEG"/>
                                             <constraint firstItem="iEJ-Ii-ehx" firstAttribute="top" secondItem="evm-xh-sU6" secondAttribute="top" constant="20" id="pum-XL-0Nv"/>
@@ -250,6 +273,7 @@
                         <outlet property="imgRecipe" destination="0IS-Sx-zi2" id="syj-kS-7Hi"/>
                         <outlet property="lblIngredientCount" destination="3yv-PY-3Js" id="uxu-5b-9im"/>
                         <outlet property="lblStepCount" destination="ejx-R0-bBz" id="MvH-v9-XX9"/>
+                        <outlet property="txtFoodName" destination="Eo2-k3-b94" id="Ait-nS-4N9"/>
                         <outlet property="txtIngredientName" destination="jms-CB-Qwq" id="Vwy-d2-t6Y"/>
                         <outlet property="txtQuantity" destination="QaD-0u-q0m" id="ZKr-F1-lyP"/>
                         <outlet property="txtStep" destination="gxK-WO-JzY" id="rNz-7p-JHF"/>
@@ -263,7 +287,7 @@
     </scenes>
     <resources>
         <namedColor name="PrimaryColor">
-            <color red="0.92500001192092896" green="0.57999998331069946" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92549019607843142" green="0.58039215686274503" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
