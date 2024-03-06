@@ -9,17 +9,22 @@ import UIKit
 
 class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    @IBOutlet weak var lblIngredientCount: UILabel!
-    @IBOutlet weak var txtIngredientName: UITextField!
-    @IBOutlet weak var txtQuantity: UITextField!
-    @IBOutlet weak var txtUnit: UITextField!
+//    @IBOutlet weak var lblIngredientCount: UILabel!
+//    @IBOutlet weak var txtIngredientName: UITextField!
+//    @IBOutlet weak var txtQuantity: UITextField!
+//    @IBOutlet weak var txtUnit: UITextField!
     @IBOutlet weak var txtFoodName: UITextField!
     
     
-    @IBOutlet weak var lblStepCount: UILabel!
-    @IBOutlet weak var txtStep: UITextField!
+//    @IBOutlet weak var lblStepCount: UILabel!
+//    @IBOutlet weak var txtStep: UITextField!
     
     @IBOutlet weak var imgRecipe: UIImageView!
+    @IBOutlet weak var tblViewIngredients: UITableView!
+    @IBOutlet weak var tblViewIngredientsHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var tblViewSteps: UITableView!
+    @IBOutlet weak var tblViewStepsHeight: NSLayoutConstraint!
     
     var ingredientsList = [RecipeIngredientsModel]()
     var stepsList = [RecipeStepsModel]()
@@ -27,11 +32,35 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     var stepsObj = RecipeStepsModel()
     var imageUrl: Data?
     
+    var items = [Item]()
+    var stepItems = [StepItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableConfig()
     }
     
+    func tableConfig() {
+        tblViewIngredients.delegate = self
+        tblViewIngredients.dataSource = self
+        
+        items.append(Item(tfName: "", tfQuantity: "", tfUnit: ""))
+        tblViewIngredientsHeight.constant = CGFloat.greatestFiniteMagnitude
+        tblViewIngredients.reloadData()
+        tblViewIngredients.layoutIfNeeded()
+        tblViewIngredientsHeight.constant = tblViewIngredients.contentSize.height
+        tblViewIngredients.isScrollEnabled = false
+        
+        tblViewSteps.delegate = self
+        tblViewSteps.dataSource = self
+        
+        stepItems.append(StepItem(tfStep: ""))
+        tblViewStepsHeight.constant = CGFloat.greatestFiniteMagnitude
+        tblViewSteps.reloadData()
+        tblViewSteps.layoutIfNeeded()
+        tblViewStepsHeight.constant = tblViewSteps.contentSize.height
+        tblViewSteps.isScrollEnabled = false
+    }
     
     func openImagePicker() {
         let imagePicker = UIImagePickerController()
@@ -87,30 +116,40 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
      }
     
     @IBAction func btnAddIngredientAction(_ sender: UIButton) {
-        ingredientsObj.serialNum = (ingredientsList.count + 1)
-        ingredientsObj.name = txtIngredientName.text
-        ingredientsObj.quantity = Int(txtQuantity.text ?? "0")
-        ingredientsList.append(ingredientsObj)
+//        ingredientsObj.serialNum = (ingredientsList.count + 1)
+//        ingredientsObj.name = txtIngredientName.text
+//        ingredientsObj.quantity = Int(txtQuantity.text ?? "0")
+//        ingredientsList.append(ingredientsObj)
+        
+        items.append(Item(tfName: "", tfQuantity: "", tfUnit: ""))
+        tblViewIngredients.reloadData()
+        tblViewIngredientsHeight.constant = tblViewIngredients.contentSize.height
+        view.layoutIfNeeded()
     }
     
     @IBAction func btnAddStepAction(_ sender: UIButton) {
-        stepsObj.step = txtStep.text
-        stepsList.append(stepsObj)
+//        stepsObj.step = txtStep.text
+//        stepsList.append(stepsObj)
+        
+        stepItems.append(StepItem(tfStep: ""))
+        tblViewSteps.reloadData()
+        tblViewStepsHeight.constant = tblViewSteps.contentSize.height
+        view.layoutIfNeeded()
     }
     
     @IBAction func btnSubmitRecipeAction(_ sender: UIButton) {
         if ingredientsList.isEmpty {
-            var obj = RecipeIngredientsModel()
-            obj.serialNum = (ingredientsList.count + 1)
-            obj.name = txtIngredientName.text
-            obj.quantity = Int(txtQuantity.text ?? "0")
-            ingredientsList.append(obj)
+//            var obj = RecipeIngredientsModel()
+//            obj.serialNum = (ingredientsList.count + 1)
+//            obj.name = txtIngredientName.text
+//            obj.quantity = Int(txtQuantity.text ?? "0")
+//            ingredientsList.append(obj)
         }
         
         if stepsList.isEmpty {
-            var obj = RecipeStepsModel()
-            obj.step = txtStep.text
-            stepsList.append(obj)
+//            var obj = RecipeStepsModel()
+//            obj.step = txtStep.text
+//            stepsList.append(obj)
         }
         
         var obj = AddRecipeModel()
@@ -131,4 +170,32 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
 
+}
+
+extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var cellCount = 0
+        if tableView == tblViewIngredients {
+            cellCount = items.count
+        }  else {
+            cellCount = stepItems.count
+        }
+        return cellCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var mainCell = UITableViewCell()
+        if tableView == tblViewIngredients {
+            let cell = tblViewIngredients.dequeueReusableCell(withIdentifier: "AddIngredientsTableViewCell", for: indexPath) as! AddIngredientsTableViewCell
+            cell.ingredientCountLabel.text = "Ingredient \(indexPath.item + 1)"
+            mainCell = cell
+        }  else {
+            let cell = tblViewSteps.dequeueReusableCell(withIdentifier: "AddStepsTableViewCell", for: indexPath) as! AddStepsTableViewCell
+            cell.lblSteps.text = "Step \(indexPath.item + 1)"
+            mainCell = cell
+        }
+        return mainCell
+    }
+    
 }
