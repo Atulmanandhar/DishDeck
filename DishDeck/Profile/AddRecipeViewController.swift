@@ -9,16 +9,7 @@ import UIKit
 
 class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-//    @IBOutlet weak var lblIngredientCount: UILabel!
-//    @IBOutlet weak var txtIngredientName: UITextField!
-//    @IBOutlet weak var txtQuantity: UITextField!
-//    @IBOutlet weak var txtUnit: UITextField!
     @IBOutlet weak var txtFoodName: UITextField!
-    
-    
-//    @IBOutlet weak var lblStepCount: UILabel!
-//    @IBOutlet weak var txtStep: UITextField!
-    
     @IBOutlet weak var imgRecipe: UIImageView!
     @IBOutlet weak var tblViewIngredients: UITableView!
     @IBOutlet weak var tblViewIngredientsHeight: NSLayoutConstraint!
@@ -90,8 +81,6 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
          if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-             // Do something with the image
-             // Save the image to the device's documents directory
              if let data = pickedImage.jpegData(compressionQuality: 1.0) {
                  let fileName = "\(UUID().uuidString).jpg" // Generate unique filename
                  let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -105,7 +94,6 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
                  }
              }
 
-             // Display it in an UIImageView
              imgRecipe.image = pickedImage
          }
          dismiss(animated: true, completion: nil)
@@ -116,11 +104,6 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
      }
     
     @IBAction func btnAddIngredientAction(_ sender: UIButton) {
-//        ingredientsObj.serialNum = (ingredientsList.count + 1)
-//        ingredientsObj.name = txtIngredientName.text
-//        ingredientsObj.quantity = Int(txtQuantity.text ?? "0")
-//        ingredientsList.append(ingredientsObj)
-        
         items.append(Item(tfName: "", tfQuantity: "", tfUnit: ""))
         tblViewIngredients.reloadData()
         tblViewIngredientsHeight.constant = tblViewIngredients.contentSize.height
@@ -128,9 +111,6 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func btnAddStepAction(_ sender: UIButton) {
-//        stepsObj.step = txtStep.text
-//        stepsList.append(stepsObj)
-        
         stepItems.append(StepItem(tfStep: ""))
         tblViewSteps.reloadData()
         tblViewStepsHeight.constant = tblViewSteps.contentSize.height
@@ -138,36 +118,68 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func btnSubmitRecipeAction(_ sender: UIButton) {
-        if ingredientsList.isEmpty {
-//            var obj = RecipeIngredientsModel()
-//            obj.serialNum = (ingredientsList.count + 1)
-//            obj.name = txtIngredientName.text
-//            obj.quantity = Int(txtQuantity.text ?? "0")
-//            ingredientsList.append(obj)
+        var allFieldsFilled = true
+        
+        for cell in tblViewIngredients.visibleCells {
+            if let cell = cell as? AddIngredientsTableViewCell {
+                if let indexPath = tblViewIngredients.indexPath(for: cell) {
+                    if cell.tfIngredientName.text?.isEmpty ?? true || cell.tfQuantity.text?.isEmpty ?? true || cell.tfUnit.text?.isEmpty ?? true {
+                        allFieldsFilled = false
+                        break
+                    }
+                    
+                    var obj = RecipeIngredientsModel()
+                    obj.serialNum = (indexPath.item + 1)
+                    obj.name = cell.tfIngredientName.text ?? ""
+                    obj.quantity = Int(cell.tfQuantity.text ?? "0")
+                    obj.unit = cell.tfUnit.text ?? ""
+                    ingredientsList.append(obj)
+                }
+            }
         }
         
-        if stepsList.isEmpty {
-//            var obj = RecipeStepsModel()
-//            obj.step = txtStep.text
-//            stepsList.append(obj)
+        for cell in tblViewSteps.visibleCells {
+            if let cell = cell as? AddStepsTableViewCell {
+                if let indexPath = tblViewSteps.indexPath(for: cell) {
+                    if cell.tfSteps.text?.isEmpty ?? true {
+                        // If any field is empty, set the flag to false and break the loop
+                        allFieldsFilled = false
+                        break
+                    }
+                    
+                    var obj = RecipeStepsModel()
+                    obj.step = cell.tfSteps.text ?? ""
+                    stepsList.append(obj)
+                }
+            }
         }
         
-        var obj = AddRecipeModel()
-        obj.recipeName = txtFoodName.text
-        obj.recipeImage = imageUrl
-        obj.recipeIngredients = ingredientsList
-        obj.recipeSteps = stepsList
-        
-        var recipeData = RecipeModel()
-        recipeData.recipeModel = [obj]
-        
-        UserDefaultManager.shared.addRecipeModel.append(recipeData)
-        print(UserDefaultManager.shared.addRecipeModel)
-
-        print(obj)
-        showAlert(title: "Recipe Added", msg: "Hooray!!! Your recipe has been added.") {
-            self.navigationController?.popViewController(animated: true)
+        if txtFoodName.text?.isEmpty == true {
+            allFieldsFilled = false
         }
+        
+        if !allFieldsFilled {
+            showAlert(title: "Alert!", msg: "All textfields must be filled") {
+                self.dismiss(animated: true)
+            }
+            return
+        } else {
+            var obj = AddRecipeModel()
+            obj.recipeName = txtFoodName.text
+            obj.recipeImage = imageUrl
+            obj.recipeIngredients = ingredientsList
+            obj.recipeSteps = stepsList
+            
+            var recipeData = RecipeModel()
+            recipeData.recipeModel = [obj]
+            
+            UserDefaultManager.shared.addRecipeModel.append(recipeData)
+            
+            showAlert(title: "Recipe Added", msg: "Hooray!!! Your recipe has been added.") {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        
     }
 
 }
