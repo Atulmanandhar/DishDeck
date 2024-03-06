@@ -69,12 +69,17 @@ extension ViewController {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            var list = UserDefaultManager.shared.addRecipeModel
-     
-            list.remove(at: indexPath.item)
-     
-            UserDefaultManager.shared.addRecipeModel = list
-            getRecipeData()
+            let alert = UIAlertController(title: "Alert!", message: "Are you sure, you want to delete this awesome recipe?", preferredStyle: .alert)
+            let okAlert = UIAlertAction(title: "Okay", style: .destructive) { action in
+                var list = UserDefaultManager.shared.addRecipeModel
+                list.remove(at: indexPath.item)
+                UserDefaultManager.shared.addRecipeModel = list
+                self.getRecipeData()
+            }
+            let cancelAlert = UIAlertAction(title: "Cancel", style: .cancel)
+            alert.addAction(okAlert)
+            alert.addAction(cancelAlert)
+            self.present(alert, animated: true)
         }
     }
 }
