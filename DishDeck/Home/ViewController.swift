@@ -66,4 +66,15 @@ extension ViewController {
         let vc = UIStoryboard(name: "RecipeDetails", bundle: nil).instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            var list = UserDefaultManager.shared.addRecipeModel
+     
+            list.remove(at: indexPath.item)
+     
+            UserDefaultManager.shared.addRecipeModel = list
+            getRecipeData()
+        }
+    }
 }
