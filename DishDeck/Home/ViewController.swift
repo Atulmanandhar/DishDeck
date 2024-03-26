@@ -61,9 +61,10 @@ extension ViewController {
         }
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "RecipeDetails", bundle: nil).instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
+        vc.getIndexPath = indexPath.item
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
