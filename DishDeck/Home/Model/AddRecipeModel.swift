@@ -8,7 +8,7 @@
 import Foundation
 
 struct RecipeModel: Codable {
-    var recipeModel: [AddRecipeModel]?
+    var recipeModel: AddRecipeModel?
 }
 
 struct AddRecipeModel: Codable {

@@ -171,7 +171,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
             obj.recipeSteps = stepsList
             
             var recipeData = RecipeModel()
-            recipeData.recipeModel = [obj]
+            recipeData.recipeModel = obj
             
             UserDefaultManager.shared.addRecipeModel.append(recipeData)
             

@@ -46,10 +46,10 @@ extension ViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recipeTableView.dequeueReusableCell(withIdentifier: "RecipesTableViewCell", for: indexPath) as! RecipesTableViewCell
-        let model = recipeList[indexPath.item].recipeModel?[0].recipeName
+        let model = recipeList[indexPath.item].recipeModel?.recipeName
         cell.recipeName.text = model
 
-        if let imageData = recipeList[indexPath.item].recipeModel?[0].recipeImage {
+        if let imageData = recipeList[indexPath.item].recipeModel?.recipeImage {
             if let image = UIImage(data: imageData) {
                 cell.recipeImage.image = image
                 print("Image loaded successfully")

@@ -47,7 +47,7 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     private func wishlistBtnConfig() {
-        if  let model = UserDefaultManager.shared.addRecipeModel[getIndexPath].recipeModel?[0].isInShoppingList {
+        if  let model = UserDefaultManager.shared.addRecipeModel[getIndexPath].recipeModel?.isInShoppingList {
             btnWishlist.tag = model ? 0 : 1
             btnWishlist.setTitle(model ? "Remove from Wishlist" : "Add to Shopping Wishlist", for: .normal)
         }
@@ -58,13 +58,13 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         var model = UserDefaultManager.shared.addRecipeModel
         
         if let recipeModels = model[getIndexPath].recipeModel {
-            if recipeModels.indices.contains(0) {
+//            if recipeModels.indices.contains(0) {
                 if btnWishlist.tag == 1 {
-                    model[getIndexPath].recipeModel?[0].isInShoppingList = true
+                    model[getIndexPath].recipeModel?.isInShoppingList = true
                 } else {
-                    model[getIndexPath].recipeModel?[0].isInShoppingList = false
+                    model[getIndexPath].recipeModel?.isInShoppingList = false
                 }
-            }
+//            }
         }
         
         UserDefaultManager.shared.addRecipeModel = model
