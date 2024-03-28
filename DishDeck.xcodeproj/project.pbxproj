@@ -22,6 +22,8 @@
 		38CFEA4C2B98093400B844A7 /* AddIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA4B2B98093400B844A7 /* AddIngredientsTableViewCell.swift */; };
 		38CFEA4E2B98134300B844A7 /* AddStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA4D2B98134300B844A7 /* AddStepsTableViewCell.swift */; };
 		38CFEA512B98169B00B844A7 /* RecipeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA502B98169B00B844A7 /* RecipeCellModel.swift */; };
+		38E3A7C52BB515DC007FE1F6 /* IngredientList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E3A7C42BB515DC007FE1F6 /* IngredientList.storyboard */; };
+		38E3A7C72BB5160F007FE1F6 /* IngredientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3A7C62BB5160F007FE1F6 /* IngredientListViewController.swift */; };
 		542D02012B5F71FC00C0B971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D02002B5F71FC00C0B971 /* AppDelegate.swift */; };
 		542D02032B5F71FC00C0B971 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D02022B5F71FC00C0B971 /* SceneDelegate.swift */; };
 		542D02052B5F71FC00C0B971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D02042B5F71FC00C0B971 /* ViewController.swift */; };
@@ -63,6 +65,8 @@
 		38CFEA4B2B98093400B844A7 /* AddIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		38CFEA4D2B98134300B844A7 /* AddStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepsTableViewCell.swift; sourceTree = "<group>"; };
 		38CFEA502B98169B00B844A7 /* RecipeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellModel.swift; sourceTree = "<group>"; };
+		38E3A7C42BB515DC007FE1F6 /* IngredientList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IngredientList.storyboard; sourceTree = "<group>"; };
+		38E3A7C62BB5160F007FE1F6 /* IngredientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListViewController.swift; sourceTree = "<group>"; };
 		425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F550E7FB77F9261ECD72A28 /* Pods-DishDeck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishDeck.debug.xcconfig"; path = "Target Support Files/Pods-DishDeck/Pods-DishDeck.debug.xcconfig"; sourceTree = "<group>"; };
 		542D01FD2B5F71FC00C0B971 /* DishDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,8 @@
 			children = (
 				387EDF5B2BB3B55B000BAED5 /* View */,
 				3853E24B2B7AF33D009C071C /* CartViewController.swift */,
+				38E3A7C62BB5160F007FE1F6 /* IngredientListViewController.swift */,
+				38E3A7C42BB515DC007FE1F6 /* IngredientList.storyboard */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				3853E25C2B7B0069009C071C /* RecipeDetails.storyboard in Resources */,
 				542D020A2B5F71FD00C0B971 /* Assets.xcassets in Resources */,
 				542D02082B5F71FC00C0B971 /* Main.storyboard in Resources */,
+				38E3A7C52BB515DC007FE1F6 /* IngredientList.storyboard in Resources */,
 				9BC848592B7C560E000BC5FE /* AddRecipe.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +382,7 @@
 				54A501122B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift in Sources */,
 				9BC848572B7C55FD000BC5FE /* AddRecipeViewController.swift in Sources */,
 				3853E24C2B7AF33D009C071C /* CartViewController.swift in Sources */,
+				38E3A7C72BB5160F007FE1F6 /* IngredientListViewController.swift in Sources */,
 				542D02052B5F71FC00C0B971 /* ViewController.swift in Sources */,
 				3853E24E2B7AF348009C071C /* ProfileViewController.swift in Sources */,
 				386439202B87BFB900427864 /* UserDefaultManager.swift in Sources */,

@@ -69,6 +69,10 @@ class CartViewController: UIViewController {
         })
     }
 
+    @IBAction func btnViewAllList(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "IngredientList", bundle: nil).instantiateViewController(withIdentifier: "IngredientListViewController") as! IngredientListViewController
+        self.present(vc, animated: true)
+    }
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
