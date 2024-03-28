@@ -10,6 +10,9 @@ import UIKit
 class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var imgFood: UIImageView!
+    @IBOutlet weak var lblRecipeName: UILabel!
+    
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var stepsTableView: UITableView!
     
@@ -20,10 +23,12 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     
     var getIndexPath = 0
     
+    var recipeDetails = AddRecipeModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableConfig()
         wishlistBtnConfig()
+        recipeDetailsConfig()
     }
     
     private func tableConfig() {
@@ -46,6 +51,26 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         stepsTableViewHeight.constant = stepsTableView.contentSize.height
     }
     
+    private func recipeDetailsConfig() {
+        if let recipeData = UserDefaultManager.shared.addRecipeModel[getIndexPath].recipeModel {
+            recipeDetails = recipeData
+            lblRecipeName.text = recipeDetails.recipeName
+            
+            if let imageData = recipeDetails.recipeImage {
+                if let image = UIImage(data: imageData) {
+                    imgFood.image = image
+                    print("Image loaded successfully")
+                } else {
+                    print("Failed to load image")
+                }
+            } else {
+                print("No image data found")
+            }
+            
+            tableConfig()
+        }
+    }
+    
     private func wishlistBtnConfig() {
         if  let model = UserDefaultManager.shared.addRecipeModel[getIndexPath].recipeModel?.isInShoppingList {
             btnWishlist.tag = model ? 0 : 1
@@ -57,14 +82,10 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBAction func btnAddWishListAction(_ sender: UIButton) {
         var model = UserDefaultManager.shared.addRecipeModel
         
-        if let recipeModels = model[getIndexPath].recipeModel {
-//            if recipeModels.indices.contains(0) {
-                if btnWishlist.tag == 1 {
-                    model[getIndexPath].recipeModel?.isInShoppingList = true
-                } else {
-                    model[getIndexPath].recipeModel?.isInShoppingList = false
-                }
-//            }
+        if btnWishlist.tag == 1 {
+            model[getIndexPath].recipeModel?.isInShoppingList = true
+        } else {
+            model[getIndexPath].recipeModel?.isInShoppingList = false
         }
         
         UserDefaultManager.shared.addRecipeModel = model
@@ -87,7 +108,13 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
 
 extension RecipeDetailsViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        var count = 0
+        if tableView == ingredientsTableView {
+            count = recipeDetails.recipeIngredients?.count ?? 0
+        } else {
+            count = recipeDetails.recipeSteps?.count ?? 0
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -95,17 +122,16 @@ extension RecipeDetailsViewController {
         
         if tableView == ingredientsTableView {
             let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "IngredientsTableViewCell", for: indexPath) as! IngredientsTableViewCell
-            cell.ingredientLabel.text = "\(indexPath.item + 1) Ingr"
+            cell.ingredientLabel.text = recipeDetails.recipeIngredients?[indexPath.item].name
             mainCell = cell
-        }
-        else {
+        } else {
             let cell = stepsTableView.dequeueReusableCell(withIdentifier: "CookingStepsTableViewCell", for: indexPath) as! CookingStepsTableViewCell
-            cell.recipeStepLabel.text = "Step \(indexPath.item + 1) Stepps"
+            cell.recipeStepLabel.text = recipeDetails.recipeSteps?[indexPath.item].step
             mainCell = cell
         }
-        
         
         return mainCell
     }
     
 }
+
