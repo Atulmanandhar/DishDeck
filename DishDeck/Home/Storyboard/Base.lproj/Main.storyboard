@@ -34,16 +34,29 @@
                                     <outlet property="delegate" destination="8bi-2h-0ob" id="9tD-2g-zhR"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plB-FK-t5N">
+                                <rect key="frame" x="109.66666666666667" y="714" width="173.66666666666663" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ue6-R9-usx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="View All Ingredients"/>
+                                <connections>
+                                    <action selector="btnViewAllList:" destination="8bi-2h-0ob" eventType="touchUpInside" id="vBN-LH-6dI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l94-9o-ER9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="l94-9o-ER9" firstAttribute="bottom" secondItem="plB-FK-t5N" secondAttribute="bottom" constant="25" id="4EW-s4-5Me"/>
                             <constraint firstItem="l94-9o-ER9" firstAttribute="trailing" secondItem="KHP-aI-8U7" secondAttribute="trailing" constant="12" id="4Y8-Ty-Qgb"/>
                             <constraint firstItem="dSs-kX-ali" firstAttribute="leading" secondItem="l94-9o-ER9" secondAttribute="leading" id="9Fh-pZ-bj7"/>
                             <constraint firstItem="l94-9o-ER9" firstAttribute="trailing" secondItem="dSs-kX-ali" secondAttribute="trailing" id="GNP-mQ-Xmr"/>
                             <constraint firstItem="KHP-aI-8U7" firstAttribute="leading" secondItem="l94-9o-ER9" secondAttribute="leading" constant="12" id="KpP-VS-C41"/>
                             <constraint firstItem="KHP-aI-8U7" firstAttribute="top" secondItem="l94-9o-ER9" secondAttribute="top" constant="8" id="VUZ-h0-fax"/>
                             <constraint firstItem="l94-9o-ER9" firstAttribute="bottom" secondItem="dSs-kX-ali" secondAttribute="bottom" id="VVI-zb-aRE"/>
+                            <constraint firstItem="plB-FK-t5N" firstAttribute="centerX" secondItem="l94-9o-ER9" secondAttribute="centerX" id="daX-j1-z8W"/>
                             <constraint firstItem="dSs-kX-ali" firstAttribute="top" secondItem="KHP-aI-8U7" secondAttribute="bottom" constant="8" id="tD6-6d-fmC"/>
                         </constraints>
                     </view>
