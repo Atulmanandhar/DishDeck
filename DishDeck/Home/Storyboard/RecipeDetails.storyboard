@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,17 +45,17 @@
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsTableViewCell" id="1G7-Tg-CzG" customClass="IngredientsTableViewCell" customModule="DishDeck" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="37.666667938232422"/>
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="36.666667938232422"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1G7-Tg-CzG" id="zPA-If-V3j">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="37.666667938232422"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="36.666667938232422"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMt-QD-yuc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="37.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="36.666666666666664"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZU-fO-ajW">
-                                                                            <rect key="frame" x="12" y="8.0000000000000018" width="369" height="21.666666666666671"/>
+                                                                            <rect key="frame" x="12" y="8.0000000000000018" width="369" height="20.666666666666671"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -106,17 +106,17 @@
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CookingStepsTableViewCell" id="ZRt-Xo-Zfg" customClass="CookingStepsTableViewCell" customModule="DishDeck" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="36.666667938232422"/>
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="37"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZRt-Xo-Zfg" id="r2E-Mb-W0N">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="36.666667938232422"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="37"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9P-Sa-4JM">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="36.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="37"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf1-nx-ItR">
-                                                                            <rect key="frame" x="12" y="8.0000000000000018" width="369" height="20.666666666666671"/>
+                                                                            <rect key="frame" x="12" y="8" width="369" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -203,10 +203,13 @@
                                 <rect key="frame" x="0.0" y="748" width="393" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A33-Vn-Hf2">
-                                        <rect key="frame" x="89" y="17" width="216" height="35"/>
+                                        <rect key="frame" x="90" y="17" width="216" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Add to Shopping Wishlist"/>
+                                        <connections>
+                                            <action selector="btnAddWishListAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zr1-pV-SxY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -229,6 +232,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnWishlist" destination="A33-Vn-Hf2" id="lh1-5R-2CA"/>
                         <outlet property="ingredientsTableView" destination="n0k-JW-ELt" id="oUt-gK-DcL"/>
                         <outlet property="ingredientsTableViewHeight" destination="sGF-cP-es2" id="VPP-bf-yte"/>
                         <outlet property="stepsTableView" destination="KEt-86-w88" id="pEu-tK-Bjf"/>
@@ -251,3 +255,4 @@
         </systemColor>
     </resources>
 </document>
+ 

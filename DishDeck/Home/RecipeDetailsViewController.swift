@@ -16,8 +16,17 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var ingredientsTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var stepsTableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var btnWishlist: UIButton!
+    
+    var getIndexPath = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableConfig()
+        wishlistBtnConfig()
+    }
+    
+    private func tableConfig() {
         ingredientsTableView.delegate = self
         ingredientsTableView.dataSource = self
         ingredientsTableView.isScrollEnabled = false
@@ -35,22 +44,44 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         stepsTableView.layoutIfNeeded()
         stepsTableView.reloadData()
         stepsTableViewHeight.constant = stepsTableView.contentSize.height
-        
-        // Do any additional setup after loading the view.
     }
     
+    private func wishlistBtnConfig() {
+        if  let model = UserDefaultManager.shared.addRecipeModel[getIndexPath].recipeModel?.isInShoppingList {
+            btnWishlist.tag = model ? 0 : 1
+            btnWishlist.setTitle(model ? "Remove from Wishlist" : "Add to Shopping Wishlist", for: .normal)
+        }
+        
+    }
     
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func btnAddWishListAction(_ sender: UIButton) {
+        var model = UserDefaultManager.shared.addRecipeModel
+        
+        if let recipeModels = model[getIndexPath].recipeModel {
+//            if recipeModels.indices.contains(0) {
+                if btnWishlist.tag == 1 {
+                    model[getIndexPath].recipeModel?.isInShoppingList = true
+                } else {
+                    model[getIndexPath].recipeModel?.isInShoppingList = false
+                }
+//            }
+        }
+        
+        UserDefaultManager.shared.addRecipeModel = model
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.03, execute: {
+            if self.btnWishlist.tag == 1 {
+                self.showAlert(title: "", msg: "Recipe added to shopping wishlist.") {
+                    self.dismiss(animated: true)
+                }
+            } else {
+                self.showAlert(title: "", msg: "Recipe removed from shopping wishlist.") {
+                    self.dismiss(animated: true)
+                }
+            }
+            self.wishlistBtnConfig()
+        })
+    }
     
 }
 

@@ -1,0 +1,6 @@
+framework module Pods_DishDeck {
+  umbrella header "Pods-DishDeck-umbrella.h"
+
+  export *
+  module * { export * }
+}
