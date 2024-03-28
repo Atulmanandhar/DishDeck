@@ -14,6 +14,10 @@
 		3853E25C2B7B0069009C071C /* RecipeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3853E25B2B7B0069009C071C /* RecipeDetails.storyboard */; };
 		386439202B87BFB900427864 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864391F2B87BFB900427864 /* UserDefaultManager.swift */; };
 		386439262B87C27600427864 /* AddRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386439252B87C27600427864 /* AddRecipeModel.swift */; };
+		387EDF582BB3B30A000BAED5 /* Pods_DishDeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		387EDF592BB3B30A000BAED5 /* Pods_DishDeck.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		387EDF5E2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDF5C2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift */; };
+		387EDF5F2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387EDF5D2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib */; };
 		38CFEA462B96D72100B844A7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA452B96D72100B844A7 /* Util.swift */; };
 		38CFEA4C2B98093400B844A7 /* AddIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA4B2B98093400B844A7 /* AddIngredientsTableViewCell.swift */; };
 		38CFEA4E2B98134300B844A7 /* AddStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA4D2B98134300B844A7 /* AddStepsTableViewCell.swift */; };
@@ -31,6 +35,20 @@
 		9BC848592B7C560E000BC5FE /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC848582B7C560E000BC5FE /* AddRecipe.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		387EDF5A2BB3B30A000BAED5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				387EDF592BB3B30A000BAED5 /* Pods_DishDeck.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B663A3A2B7B1BC800740E20 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		3853E24B2B7AF33D009C071C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -39,10 +57,14 @@
 		3853E25B2B7B0069009C071C /* RecipeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetails.storyboard; sourceTree = "<group>"; };
 		3864391F2B87BFB900427864 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		386439252B87C27600427864 /* AddRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeModel.swift; sourceTree = "<group>"; };
+		387EDF5C2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingWishlistTableViewCell.swift; sourceTree = "<group>"; };
+		387EDF5D2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingWishlistTableViewCell.xib; sourceTree = "<group>"; };
 		38CFEA452B96D72100B844A7 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		38CFEA4B2B98093400B844A7 /* AddIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		38CFEA4D2B98134300B844A7 /* AddStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepsTableViewCell.swift; sourceTree = "<group>"; };
 		38CFEA502B98169B00B844A7 /* RecipeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellModel.swift; sourceTree = "<group>"; };
+		425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F550E7FB77F9261ECD72A28 /* Pods-DishDeck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishDeck.debug.xcconfig"; path = "Target Support Files/Pods-DishDeck/Pods-DishDeck.debug.xcconfig"; sourceTree = "<group>"; };
 		542D01FD2B5F71FC00C0B971 /* DishDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542D02002B5F71FC00C0B971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542D02022B5F71FC00C0B971 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +78,7 @@
 		54A501112B7B1D1C00DF95B2 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		9BC848562B7C55FD000BC5FE /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		9BC848582B7C560E000BC5FE /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
+		DFC8B1C85981B46921AD0B0F /* Pods-DishDeck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishDeck.release.xcconfig"; path = "Target Support Files/Pods-DishDeck/Pods-DishDeck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +86,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387EDF582BB3B30A000BAED5 /* Pods_DishDeck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F69408A5125933C5D7D498C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3853E2512B7AF44F009C071C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +128,7 @@
 		3853E2582B7AF534009C071C /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				387EDF5B2BB3B55B000BAED5 /* View */,
 				3853E24B2B7AF33D009C071C /* CartViewController.swift */,
 			);
 			path = Cart;
@@ -147,6 +180,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		387EDF5B2BB3B55B000BAED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				387EDF5C2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift */,
+				387EDF5D2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		38CFEA4A2B98092100B844A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +211,8 @@
 			children = (
 				542D01FF2B5F71FC00C0B971 /* DishDeck */,
 				542D01FE2B5F71FC00C0B971 /* Products */,
+				578FE9D502895AE9F2E715AD /* Pods */,
+				0F69408A5125933C5D7D498C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +239,15 @@
 			path = DishDeck;
 			sourceTree = "<group>";
 		};
+		578FE9D502895AE9F2E715AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F550E7FB77F9261ECD72A28 /* Pods-DishDeck.debug.xcconfig */,
+				DFC8B1C85981B46921AD0B0F /* Pods-DishDeck.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 542D02112B5F71FD00C0B971 /* Build configuration list for PBXNativeTarget "DishDeck" */;
 			buildPhases = (
+				6CE5C849CC725F7D5A087B7D /* [CP] Check Pods Manifest.lock */,
 				542D01F92B5F71FC00C0B971 /* Sources */,
 				542D01FA2B5F71FC00C0B971 /* Frameworks */,
 				542D01FB2B5F71FC00C0B971 /* Resources */,
+				F22BCDD606EF139C80C6AAE3 /* [CP] Embed Pods Frameworks */,
+				387EDF5A2BB3B30A000BAED5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387EDF5F2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib in Resources */,
 				542D020D2B5F71FD00C0B971 /* LaunchScreen.storyboard in Resources */,
 				3853E25C2B7B0069009C071C /* RecipeDetails.storyboard in Resources */,
 				542D020A2B5F71FD00C0B971 /* Assets.xcassets in Resources */,
@@ -263,11 +320,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CE5C849CC725F7D5A087B7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DishDeck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F22BCDD606EF139C80C6AAE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishDeck/Pods-DishDeck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishDeck/Pods-DishDeck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishDeck/Pods-DishDeck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		542D01F92B5F71FC00C0B971 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387EDF5E2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift in Sources */,
 				38CFEA512B98169B00B844A7 /* RecipeCellModel.swift in Sources */,
 				38CFEA4C2B98093400B844A7 /* AddIngredientsTableViewCell.swift in Sources */,
 				38CFEA4E2B98134300B844A7 /* AddStepsTableViewCell.swift in Sources */,
@@ -347,7 +447,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -410,7 +510,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -431,6 +531,7 @@
 		};
 		542D02122B5F71FD00C0B971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F550E7FB77F9261ECD72A28 /* Pods-DishDeck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +560,7 @@
 		};
 		542D02132B5F71FD00C0B971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC8B1C85981B46921AD0B0F /* Pods-DishDeck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

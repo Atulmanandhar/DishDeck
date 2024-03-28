@@ -8,7 +8,7 @@
 import Foundation
 
 struct RecipeModel: Codable {
-    var recipeModel: [AddRecipeModel]?
+    var recipeModel: AddRecipeModel?
 }
 
 struct AddRecipeModel: Codable {
@@ -16,6 +16,7 @@ struct AddRecipeModel: Codable {
     var recipeImage: Data?
     var recipeIngredients: [RecipeIngredientsModel]?
     var recipeSteps: [RecipeStepsModel]?
+    var isInShoppingList: Bool = false
 }
 
 struct RecipeIngredientsModel: Codable {
@@ -28,3 +29,6 @@ struct RecipeIngredientsModel: Codable {
 struct RecipeStepsModel: Codable {
     var step: String?
 }
+
+
+
