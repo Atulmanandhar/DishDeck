@@ -18,6 +18,7 @@
 		387EDF592BB3B30A000BAED5 /* Pods_DishDeck.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		387EDF5E2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDF5C2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift */; };
 		387EDF5F2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387EDF5D2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib */; };
+		388D43222BC2FC2800F08FF4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 388D43242BC2FC2800F08FF4 /* Localizable.strings */; };
 		38CFEA462B96D72100B844A7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA452B96D72100B844A7 /* Util.swift */; };
 		38CFEA4C2B98093400B844A7 /* AddIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA4B2B98093400B844A7 /* AddIngredientsTableViewCell.swift */; };
 		38CFEA4E2B98134300B844A7 /* AddStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEA4D2B98134300B844A7 /* AddStepsTableViewCell.swift */; };
@@ -61,6 +62,11 @@
 		386439252B87C27600427864 /* AddRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeModel.swift; sourceTree = "<group>"; };
 		387EDF5C2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingWishlistTableViewCell.swift; sourceTree = "<group>"; };
 		387EDF5D2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingWishlistTableViewCell.xib; sourceTree = "<group>"; };
+		388D431C2BC2FAEB00F08FF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		388D431D2BC2FAEB00F08FF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		388D431F2BC2FB1500F08FF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		388D43232BC2FC2800F08FF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		388D43252BC2FC2B00F08FF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38CFEA452B96D72100B844A7 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		38CFEA4B2B98093400B844A7 /* AddIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		38CFEA4D2B98134300B844A7 /* AddStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepsTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			children = (
 				3864391F2B87BFB900427864 /* UserDefaultManager.swift */,
 				38CFEA452B96D72100B844A7 /* Util.swift */,
+				388D43242BC2FC2800F08FF4 /* Localizable.strings */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -299,6 +306,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 542D01F42B5F71FB00C0B971;
 			productRefGroup = 542D01FE2B5F71FC00C0B971 /* Products */;
@@ -320,6 +328,7 @@
 				3853E25C2B7B0069009C071C /* RecipeDetails.storyboard in Resources */,
 				542D020A2B5F71FD00C0B971 /* Assets.xcassets in Resources */,
 				542D02082B5F71FC00C0B971 /* Main.storyboard in Resources */,
+				388D43222BC2FC2800F08FF4 /* Localizable.strings in Resources */,
 				38E3A7C52BB515DC007FE1F6 /* IngredientList.storyboard in Resources */,
 				9BC848592B7C560E000BC5FE /* AddRecipe.storyboard in Resources */,
 			);
@@ -399,10 +408,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		388D43242BC2FC2800F08FF4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				388D43232BC2FC2800F08FF4 /* en */,
+				388D43252BC2FC2B00F08FF4 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		542D02062B5F71FC00C0B971 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				542D02072B5F71FC00C0B971 /* Base */,
+				388D431C2BC2FAEB00F08FF4 /* fr */,
+				388D431F2BC2FB1500F08FF4 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -411,6 +431,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				542D020C2B5F71FD00C0B971 /* Base */,
+				388D431D2BC2FAEB00F08FF4 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -423,6 +444,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -486,6 +508,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

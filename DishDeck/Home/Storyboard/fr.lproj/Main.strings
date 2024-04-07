@@ -1,0 +1,45 @@
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "0wR-Jb-FYe"; */
+"0wR-Jb-FYe.title" = "Profile";
+
+/* Class = "UILabel"; text = "My Profile"; ObjectID = "3YT-9r-yCC"; */
+"3YT-9r-yCC.text" = "My Profile";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "3cA-jC-cW4"; */
+"3cA-jC-cW4.text" = "Language";
+
+/* Class = "UITabBarItem"; title = "Cart"; ObjectID = "IVl-3E-6qj"; */
+"IVl-3E-6qj.title" = "Cart";
+
+/* Class = "UILabel"; text = "Shopping Wishlist"; ObjectID = "KHP-aI-8U7"; */
+"KHP-aI-8U7.text" = "Shopping Wishlist";
+
+/* Class = "UILabel"; text = "Dark Mode"; ObjectID = "MlE-lm-Hdg"; */
+"MlE-lm-Hdg.text" = "Dark Mode";
+
+/* Class = "UILabel"; text = "Coming soon"; ObjectID = "Mo4-X7-ycP"; */
+"Mo4-X7-ycP.text" = "Coming soon";
+
+/* Class = "UIButton"; configuration.title = "Add Recipe"; ObjectID = "TI9-bQ-PYH"; */
+"TI9-bQ-PYH.configuration.title" = "Add Recipe";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TI9-bQ-PYH"; */
+"TI9-bQ-PYH.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Your Delicious Recipes"; ObjectID = "hGG-32-AbJ"; */
+"hGG-32-AbJ.text" = "Your Delicious Recipes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "isr-Gi-GHz"; */
+"isr-Gi-GHz.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "View All Ingredients"; ObjectID = "plB-FK-t5N"; */
+"plB-FK-t5N.configuration.title" = "View All Ingredients";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "plB-FK-t5N"; */
+"plB-FK-t5N.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "urt-b9-YDL"; */
+"urt-b9-YDL.title" = "Home";
+
+/* Class = "UILabel"; text = "Coming soon"; ObjectID = "uw4-bg-hc7"; */
+"uw4-bg-hc7.text" = "Coming soon";
