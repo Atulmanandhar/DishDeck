@@ -10,6 +10,8 @@ import UIKit
 class IngredientListViewController: UIViewController {
     
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblIngredientList: UILabel!
+    @IBOutlet weak var btnClose: UIButton!
     
     var wishlistData = [RecipeModel]()
     var listArray = [String]()
@@ -19,6 +21,16 @@ class IngredientListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchListData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        langConfig()
+    }
+    
+    private func langConfig() {
+        lblIngredientList.text = "ingredientsrequired".localized()
+        btnClose.setTitle("close".localized(), for: .normal)
     }
     
     private func fetchListData() {

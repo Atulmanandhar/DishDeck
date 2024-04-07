@@ -14,6 +14,7 @@ class ShoppingWishlistTableViewCell: UITableViewCell {
     @IBOutlet weak var lblItemName: UILabel!
     @IBOutlet weak var viewIngredients: UIStackView!
     @IBOutlet weak var lblIngredients: UILabel!
+    @IBOutlet weak var lblIngredientsRequired: UILabel!
     @IBOutlet weak var arrowIcon: UIImageView!
     
     static let identifier = "ShoppingWishlistTableViewCell"
@@ -29,6 +30,7 @@ class ShoppingWishlistTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+//        lblIngredientsRequired.text = "ingredientsrequired".localized()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

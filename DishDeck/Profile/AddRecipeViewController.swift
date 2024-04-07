@@ -17,6 +17,16 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var tblViewSteps: UITableView!
     @IBOutlet weak var tblViewStepsHeight: NSLayoutConstraint!
     
+    // MARK: - Localizatons
+    @IBOutlet weak var lblLetsCreateRecipe: UILabel!
+    @IBOutlet weak var lblPickImage: UILabel!
+    @IBOutlet weak var lblEnterFoodName: UILabel!
+    @IBOutlet weak var lblEnterTheIngredients: UILabel!
+    @IBOutlet weak var btnAddAnotherIngredient: UIButton!
+    @IBOutlet weak var lblEnterTheSteps: UILabel!
+    @IBOutlet weak var btnAddAnotherStep: UIButton!
+    @IBOutlet weak var btnSubmitRecipe: UIButton!
+    
     var ingredientsList = [RecipeIngredientsModel]()
     var stepsList = [RecipeStepsModel]()
     var ingredientsObj = RecipeIngredientsModel()
@@ -29,6 +39,23 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         tableConfig()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        langConfig()
+    }
+    
+    private func langConfig() {
+        lblLetsCreateRecipe.text = "letscreatearecipe".localized()
+        lblPickImage.text = "pickanimage".localized()
+        lblEnterFoodName.text = "enterfoodname".localized()
+        txtFoodName.placeholder = "enterfoodname".localized()
+        lblEnterTheIngredients.text = "entertheingredients".localized()
+        btnAddAnotherIngredient.setTitle("addanotheringredient".localized(), for: .normal)
+        lblEnterTheSteps.text = "enterthesteps".localized()
+        btnAddAnotherStep.setTitle("addanotherstep".localized(), for: .normal)
+        btnSubmitRecipe.setTitle("submityourrecipe".localized(), for: .normal)
     }
     
     func tableConfig() {
@@ -200,11 +227,19 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         var mainCell = UITableViewCell()
         if tableView == tblViewIngredients {
             let cell = tblViewIngredients.dequeueReusableCell(withIdentifier: "AddIngredientsTableViewCell", for: indexPath) as! AddIngredientsTableViewCell
-            cell.ingredientCountLabel.text = "Ingredient \(indexPath.item + 1)"
+            cell.ingredientCountLabel.text = "ingredient".localized() + " \(indexPath.item + 1)"
+            
+            cell.tfIngredientName.placeholder = "enteringredientname".localized()
+            cell.tfQuantity.placeholder = "enterquantity".localized()
+            cell.tfUnit.placeholder = "unit".localized()
+            
             mainCell = cell
         }  else {
             let cell = tblViewSteps.dequeueReusableCell(withIdentifier: "AddStepsTableViewCell", for: indexPath) as! AddStepsTableViewCell
-            cell.lblSteps.text = "Step \(indexPath.item + 1)"
+            cell.lblSteps.text = "step".localized() + " \(indexPath.item + 1)"
+            
+            cell.tfSteps.placeholder = "enterstepdetails".localized()
+            
             mainCell = cell
         }
         return mainCell

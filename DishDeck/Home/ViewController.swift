@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
+    @IBOutlet weak var lblYourRecipe: UILabel!
     @IBOutlet weak var recipeTableView: UITableView!
     
     var recipeList = [RecipeModel]()
@@ -24,6 +25,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getRecipeData()
+        updateUITabBarItemTitles()
+        lblYourRecipe.text = "yourdeliciousrecipe".localized()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "back".localized(), style: .plain, target: nil, action: nil)
+    }
+    
+    func updateUITabBarItemTitles() {
+        if let tabBarController = self.tabBarController {
+            let titles = [
+                "home",
+                "cart",
+                "profile"
+            ]
+            
+            for (index, viewController) in tabBarController.viewControllers!.enumerated() {
+                viewController.tabBarItem.title = titles[index].localized()
+            }
+        }
     }
     
     func getRecipeData() {
