@@ -190,8 +190,9 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
                 self.dismiss(animated: true)
             }
             return
-        } else {
+        } else {           
             var obj = AddRecipeModel()
+            obj.id = UserDefaultManager.shared.addRecipeModel.count
             obj.recipeName = txtFoodName.text
             obj.recipeImage = imageUrl
             obj.recipeIngredients = ingredientsList

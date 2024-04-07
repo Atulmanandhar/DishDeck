@@ -122,8 +122,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         cell.deleteTapped = { [weak self] view in
-            print("\(indexPath.item) clicked...")
-            self?.removeFromWishList(indexPath: indexPath.item)
+            self?.removeFromWishList(indexPath: self?.wishlistData[indexPath.item].recipeModel?.id ?? 0)
         }
         
         return cell
