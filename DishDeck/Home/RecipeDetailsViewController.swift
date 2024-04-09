@@ -19,16 +19,27 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var ingredientsTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var stepsTableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var lblIngredientsRequired: UILabel!
+    @IBOutlet weak var lblCookingSteps: UILabel!
     @IBOutlet weak var btnWishlist: UIButton!
     
     var getIndexPath = 0
-    
     var recipeDetails = AddRecipeModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         wishlistBtnConfig()
         recipeDetailsConfig()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        langConfig()
+    }
+    
+    private func langConfig() {
+        lblIngredientsRequired.text = "ingredientsrequired".localized()
+        lblCookingSteps.text = "cookingsteps".localized()
     }
     
     private func tableConfig() {
@@ -74,7 +85,7 @@ class RecipeDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     private func wishlistBtnConfig() {
         if  let model = UserDefaultManager.shared.addRecipeModel[getIndexPath].recipeModel?.isInShoppingList {
             btnWishlist.tag = model ? 0 : 1
-            btnWishlist.setTitle(model ? "Remove from Wishlist" : "Add to Shopping Wishlist", for: .normal)
+            btnWishlist.setTitle(model ? "removefromwishlit".localized() : "addtoshoppinglist".localized(), for: .normal)
         }
         
     }

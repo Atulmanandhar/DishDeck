@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  DishDeck
+
+  Created by Akash Shrestha on 2024-04-07.
+  
+*/
+
+"home" = "Home";
+"cart" = "Cart";
+"profile" = "Profile";
+"language" = "Language";
+"yourdeliciousrecipe" = "Your Delicious Recipes";
+"darkmode" = "Dark Mode";
+"addrecipe" = "Add Recipe";
+"back" = "Back";
+"ingredientsrequired" = "Ingredients Required";
+"cookingsteps" = "Cooking Steps";
+"addtoshoppinglist" = "Add to Shopping Wishlist";
+"removefromwishlit" = "Remove from Wishlist";
+"shoppingwishlist" = "Shopping Wishlist";
+"viewallingredients" = "View All Ingredients";
+"close" = "Close";
+
+"letscreatearecipe" = "Let's Create a Recipe";
+"pickanimage" = "Pick an Image";
+"enterfoodname" = "Enter Food Name";
+"entertheingredients" = "Enter the Ingredients";
+"ingredient" = "Ingredient";
+"step" = "Step";
+"enteringredientname" = "Enter ingredient name";
+"enterquantity" = "Enter quantity";
+"unit" = "Unit";
+"addanotheringredient" = "Add another ingredient";
+"enterthesteps" = "Enter the Steps";
+"enterstepdetails" = "Enter step details";
+"addanotherstep" = "Add another step";
+"submityourrecipe" = "Submit Your Recipe";
+
+

@@ -9,6 +9,8 @@ import UIKit
 
 class CartViewController: UIViewController {
     
+    @IBOutlet weak var lblShoppingList: UILabel!
+    @IBOutlet weak var btnAllIngredinets: UIButton!
     @IBOutlet weak var tblView: UITableView!
     
     var cellHeights = [IndexPath: CGFloat]()
@@ -23,12 +25,18 @@ class CartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchWishList()
+        langConfig()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         wishlistData.removeAll()
         expansionData.removeAll()
+    }
+    
+    private func langConfig() {
+        lblShoppingList.text = "shoppingwishlist".localized()
+        btnAllIngredinets.setTitle("viewallingredients".localized(), for: .normal)
     }
     
     private func tableConfig() {
@@ -109,11 +117,12 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.lblIngredients.text = ingredients
             cell.viewIngredients.isHidden = !cellExpansion.isExpanded
+            
+            cell.lblIngredientsRequired.text = "ingredientsrequired".localized()
         }
 
         cell.deleteTapped = { [weak self] view in
-            print("\(indexPath.item) clicked...")
-            self?.removeFromWishList(indexPath: indexPath.item)
+            self?.removeFromWishList(indexPath: self?.wishlistData[indexPath.item].recipeModel?.id ?? 0)
         }
         
         return cell

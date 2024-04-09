@@ -57,6 +57,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnClose" destination="368-bJ-Fhz" id="q90-Ci-ZIC"/>
+                        <outlet property="lblIngredientList" destination="6G8-gp-9k4" id="rc1-8B-laY"/>
                         <outlet property="lblName" destination="gVq-uB-eWN" id="p3h-Bv-ZB2"/>
                     </connections>
                 </viewController>

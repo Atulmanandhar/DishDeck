@@ -310,7 +310,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBQ-DA-o7g">
                                                 <rect key="frame" x="131.66666666666666" y="70" width="129.99999999999997" height="130"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lH-fk-qhp">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="8lH-fk-qhp">
                                                         <rect key="frame" x="8" y="58.000000000000007" width="114" height="14.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -631,7 +631,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAddAnotherIngredient" destination="D1U-Hi-DIq" id="gSu-zN-UgT"/>
+                        <outlet property="btnAddAnotherStep" destination="ERv-2E-WxM" id="NAf-r6-uQq"/>
+                        <outlet property="btnSubmitRecipe" destination="fL5-6t-81k" id="c5Y-L2-aAn"/>
                         <outlet property="imgRecipe" destination="Mcz-Dx-6Rd" id="OYk-BU-Oke"/>
+                        <outlet property="lblEnterFoodName" destination="WHH-jI-zLA" id="PE1-F0-AaP"/>
+                        <outlet property="lblEnterTheIngredients" destination="EBr-pA-Vc4" id="TYJ-Ub-T8j"/>
+                        <outlet property="lblEnterTheSteps" destination="n6j-mL-0zp" id="ud1-Ws-ceZ"/>
+                        <outlet property="lblLetsCreateRecipe" destination="Ndm-pJ-a4d" id="if5-ch-Xq2"/>
+                        <outlet property="lblPickImage" destination="8lH-fk-qhp" id="woB-7Y-teN"/>
                         <outlet property="tblViewIngredients" destination="JZk-SO-qDc" id="PVI-jc-9Qw"/>
                         <outlet property="tblViewIngredientsHeight" destination="gIg-vh-iG8" id="qk0-97-PXN"/>
                         <outlet property="tblViewSteps" destination="1q0-yz-x3I" id="4hT-ia-jzF"/>
