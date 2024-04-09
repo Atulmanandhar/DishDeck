@@ -161,7 +161,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-gi-EZJ">
+                            <searchBar contentMode="redraw" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-gi-EZJ">
                                 <rect key="frame" x="0.0" y="141" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -188,6 +188,7 @@
                     <connections>
                         <outlet property="lblYourRecipe" destination="hGG-32-AbJ" id="lHZ-bp-lo6"/>
                         <outlet property="recipeTableView" destination="Tzh-vX-KOf" id="kvx-yB-xQ2"/>
+                        <outlet property="searchBar" destination="Auf-gi-EZJ" id="9V5-0J-gN1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Cj-zcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
