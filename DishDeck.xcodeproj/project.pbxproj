@@ -15,7 +15,6 @@
 		386439202B87BFB900427864 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864391F2B87BFB900427864 /* UserDefaultManager.swift */; };
 		386439262B87C27600427864 /* AddRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386439252B87C27600427864 /* AddRecipeModel.swift */; };
 		387EDF582BB3B30A000BAED5 /* Pods_DishDeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		387EDF592BB3B30A000BAED5 /* Pods_DishDeck.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425C31757F5DE55C4B5F784C /* Pods_DishDeck.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		387EDF5E2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDF5C2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.swift */; };
 		387EDF5F2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387EDF5D2BB3B57F000BAED5 /* ShoppingWishlistTableViewCell.xib */; };
 		388D43222BC2FC2800F08FF4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 388D43242BC2FC2800F08FF4 /* Localizable.strings */; };
@@ -37,20 +36,6 @@
 		9BC848572B7C55FD000BC5FE /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC848562B7C55FD000BC5FE /* AddRecipeViewController.swift */; };
 		9BC848592B7C560E000BC5FE /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC848582B7C560E000BC5FE /* AddRecipe.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		387EDF5A2BB3B30A000BAED5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				387EDF592BB3B30A000BAED5 /* Pods_DishDeck.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B663A3A2B7B1BC800740E20 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
@@ -273,7 +258,6 @@
 				542D01FA2B5F71FC00C0B971 /* Frameworks */,
 				542D01FB2B5F71FC00C0B971 /* Resources */,
 				F22BCDD606EF139C80C6AAE3 /* [CP] Embed Pods Frameworks */,
-				387EDF5A2BB3B30A000BAED5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -568,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W45QRPK47;
+				DEVELOPMENT_TEAM = 4JN2ZQTN8B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DishDeck/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -597,7 +581,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W45QRPK47;
+				DEVELOPMENT_TEAM = 4JN2ZQTN8B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DishDeck/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

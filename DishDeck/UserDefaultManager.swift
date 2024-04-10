@@ -17,6 +17,17 @@ class UserDefaultManager {
     private let ADD_RECIPE_MODEL = "ADD_RECIPE_MODEL"
     private let RECIPE_INGREDIENTS_MODEL = "RECIPE_INGREDIENTS_MODEL"
     private let RECIPE_STEPS_MODEL = "RECIPE_STEPS_MODEL"
+    private let THEME_MODE = "THEME_MODE"
+    
+    var themeMode: Theme {
+        get {
+            return Theme(rawValue: userDefault.integer(forKey: THEME_MODE)) ?? .light
+        }
+        
+        set {
+            userDefault.set(newValue.rawValue, forKey: THEME_MODE)
+        }
+    }
     
     var addRecipeModel: [RecipeModel] {
         get {
