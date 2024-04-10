@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var btnAddRecipe: UIButton!
     @IBOutlet weak var switchLang: UISwitch!
+    @IBOutlet weak var switchDarkMode: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,10 @@ class ProfileViewController: UIViewController {
         btnAddRecipe.setTitle("addrecipe".localized(), for: .normal)
         
         switchLang.isOn = DefaultManager.getAppLanguage() == 2 ? true : false
-        
         updateUITabBarItemTitles()
+
+        switchDarkMode.isOn = UserDefaultManager.shared.themeMode.getUserInterfaceStyle() == .dark ? true : false
+        
     }
     
     func updateUITabBarItemTitles() {
@@ -41,6 +44,11 @@ class ProfileViewController: UIViewController {
         }
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "back".localized(), style: .plain, target: nil, action: nil)
+    }
+    
+    @IBAction func configDarkMode(_ sender: UISwitch) {
+        UserDefaultManager.shared.themeMode = Theme(rawValue: sender.isOn ? 1 : 2) ?? .light
+        self.view.window?.overrideUserInterfaceStyle = UserDefaultManager.shared.themeMode.getUserInterfaceStyle()
     }
     
     @IBAction func configLanguage(_ sender: UISwitch) {

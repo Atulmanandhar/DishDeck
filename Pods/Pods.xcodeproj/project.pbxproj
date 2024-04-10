@@ -194,6 +194,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		388D43282BC5FEB700F08FF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388D432B2BC5FF4E00F08FF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00A48937A821A9629C72D446625109F5 /* BlurEffectStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurEffectStyle.swift; path = Sources/Enums/BlurEffectStyle.swift; sourceTree = "<group>"; };
 		019651BEB37BB44254316A4856D58863 /* CoverAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverAnimator.swift; path = Sources/Animators/PresentationAnimator/CoverAnimator.swift; sourceTree = "<group>"; };
@@ -278,7 +301,7 @@
 		728ACE724182C162F3339A82FF8D652A /* TimingFunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimingFunctionType.swift; path = Sources/Enums/TimingFunctionType.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		734F0C5D050350DDBF9077F72EE687D7 /* ScreenEdgePanInteractiveAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenEdgePanInteractiveAnimator.swift; path = Sources/Animators/InteractiveAnimator/ScreenEdgePanInteractiveAnimator.swift; sourceTree = "<group>"; };
-		74CCAEE353E0BBF6438037CCD907EDA8 /* Pods-DishDeck */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DishDeck"; path = Pods_DishDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CCAEE353E0BBF6438037CCD907EDA8 /* Pods_DishDeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishDeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		769FA372959712E31EED4EDEAEEA4799 /* CALayerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CALayerExtension.swift; path = Sources/Extensions/CALayerExtension.swift; sourceTree = "<group>"; };
 		776392EF8B90423FEBD7C5A49CB0017F /* PlaceholderDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaceholderDesignable.swift; path = Sources/Protocols/Designable/PlaceholderDesignable.swift; sourceTree = "<group>"; };
 		7818EB0B365A65126815A9C2D35C60A0 /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBezierPathExtension.swift; path = Sources/Extensions/UIBezierPathExtension.swift; sourceTree = "<group>"; };
@@ -410,7 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				382801D37C7C7FB12DA7F82AF99BA6E5 /* IBAnimatable.framework */,
-				74CCAEE353E0BBF6438037CCD907EDA8 /* Pods-DishDeck */,
+				74CCAEE353E0BBF6438037CCD907EDA8 /* Pods_DishDeck.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -699,6 +722,7 @@
 				4006BE45466B8886D15401379FAE429D /* Sources */,
 				8DEC22BDD32DE20B351A9D5F116C90E7 /* Frameworks */,
 				605678BCF9EEDE04DBFE1D5BA32C7709 /* Resources */,
+				388D432B2BC5FF4E00F08FF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -707,7 +731,7 @@
 			);
 			name = "Pods-DishDeck";
 			productName = Pods_DishDeck;
-			productReference = 74CCAEE353E0BBF6438037CCD907EDA8 /* Pods-DishDeck */;
+			productReference = 74CCAEE353E0BBF6438037CCD907EDA8 /* Pods_DishDeck.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6396C4AEC3E957AC8702ACF5934B970F /* IBAnimatable */ = {
@@ -718,6 +742,7 @@
 				0D1D873BD2440BBF0813BEC1039A6DB8 /* Sources */,
 				9293D71FA07BCB575DB159F1786EC817 /* Frameworks */,
 				1A48FD16DA32A392E5239575AC5C2E6A /* Resources */,
+				388D43282BC5FEB700F08FF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -977,13 +1002,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C1D679AF8F90564456F826D861F567D /* Pods-DishDeck.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1002,6 +1026,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1081,13 +1106,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08AC9F118E6CF8E3527A21CEF065BF5D /* Pods-DishDeck.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1106,6 +1130,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1122,7 +1147,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4W45QRPK47;
+				DEVELOPMENT_TEAM = 4JN2ZQTN8B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1158,7 +1183,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4W45QRPK47;
+				DEVELOPMENT_TEAM = 4JN2ZQTN8B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
